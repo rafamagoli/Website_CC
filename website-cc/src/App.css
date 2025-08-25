@@ -1,0 +1,76 @@
+/* global layout, colors and section styles */
+
+:root {
+  /* Primary palette */
+  --color-primary-1: #536845; /* green */
+  --color-primary-2: #f1ae2f; /* yellow */
+  --color-primary-3: #be4214; /* rust */
+
+  /* Secondary palette */
+  --color-secondary-1: #fffffe; /* off-white */
+  --color-secondary-2: #ffedd3; /* peach */
+  --color-secondary-3: #efedec; /* light gray-beige */
+
+  /* Derived tokens */
+  --bg: var(--color-secondary-3);
+  --fg: #2a2a2a;                 /* neutral dark for readability */
+  --muted: #6f7b5f;              /* softened from primary-1 */
+  --brand: var(--color-primary-2);/* accent color (buttons/links) */
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 16px 80px;
+}
+
+.section {
+  padding: 72px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.section--hero {
+  padding: 96px 0 72px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.hero__title {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.15;
+}
+
+.hero__subtitle {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.hero__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+  background: var(--brand);
+  color: #0a0b0c;
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: rgba(0, 0, 0, 0.12);
+  color: var(--fg);
+}
+.btn--ghost:hover {
+  border-color: rgba(0, 0, 0, 0.28);
+}

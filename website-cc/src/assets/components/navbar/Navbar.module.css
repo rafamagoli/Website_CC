@@ -1,0 +1,55 @@
+/* Navbar.module.css */
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  transition: background 200ms ease, border-color 200ms ease;
+  z-index: 50;
+  background: transparent; /* mesma cor do fundo */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* linha leve, semi-transparente */
+}
+.logo {
+  height: 40px;  
+  width: auto;
+  display: block;
+}
+.scrolled {
+  /* translucency on scroll for light palette */
+  background: rgba(255, 255, 254, 0.7); /* uses secondary-1 tone */
+  border-bottom: 1px solid var(--color-secondary-3);
+}
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.brand {
+  color: var(--color-primary-3);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-family: var(--font-primary); /* brand in Playfair */
+}
+.links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.link {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-family: var(--font-secondary);
+}
+.link:hover,
+.link:focus {
+  color: var(--brand);
+  outline: none;
+}
