@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import styles from './Navbar.module.css'
 import Logo from '../../CCLOGO.png' // ensure: src/assets/CCLOGO.png
 
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -10,11 +11,11 @@ export default function Navbar() {
   // define your sections here (IDs must exist in the page)
   const navItems = useMemo(
     () => [
-      { id: 'home', label: 'Home' },
-      { id: 'about', label: 'About' },
-      { id: 'services', label: 'Services' },
-      { id: 'portfolio', label: 'Portfolio' },
-      { id: 'contact', label: 'Contact' },
+      { id: 'home', label: 'Página Inicial' },
+      { id: 'about', label: 'Sobre mim' },
+      { id: 'services', label: 'Terapia Breve' },
+      { id: 'portfolio', label: 'Portfólio' },
+      { id: 'contact', label: 'Contato' },
     ],
     []
   )
