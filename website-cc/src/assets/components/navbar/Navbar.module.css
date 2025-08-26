@@ -1,40 +1,98 @@
 /* Navbar.module.css */
+/* Colors + fonts rely on your global CSS variables set in App.css/index.css:
+   --color-primary-1: #536845;
+   --color-primary-2: #f1ae2f;
+   --color-primary-3: #be4214;
+   --color-secondary-1: #fffffe;
+   --color-secondary-2: #ffedd3;
+   --color-secondary-3: #efedec;
+   --font-primary: 'Playfair Display', serif;
+   --font-secondary: 'Poppins', ...; */
+
+/* ===== Base (sticky, subtle separation line) ===== */
 .nav {
   position: sticky;
   top: 0;
   width: 100%;
+  background: transparent; /* same as page background */
   backdrop-filter: blur(8px);
   transition: background 200ms ease, border-color 200ms ease;
   z-index: 50;
-  background: transparent; /* mesma cor do fundo */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* linha leve, semi-transparente */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
-.logo {
-  height: 40px;  
-  width: auto;
-  display: block;
-}
+
 .scrolled {
-  /* translucency on scroll for light palette */
-  background: rgba(255, 255, 254, 0.7); /* uses secondary-1 tone */
-  border-bottom: 1px solid var(--color-secondary-3);
+  /* keep subtle look on scroll */
+  background: rgba(255, 255, 254, 0.7);
+  border-bottom-color: rgba(0, 0, 0, 0.08);
 }
+
+/* ===== Layout container ===== */
 .inner {
+  position: relative; /* anchor for dropdown */
   max-width: 1080px;
   margin: 0 auto;
-  height: 64px;
+  min-height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  padding: 8px 16px;
 }
+
+/* ===== Brand (logo link) ===== */
 .brand {
   color: var(--color-primary-3);
-  text-decoration: none;
+  font-family: var(--font-primary);
   font-weight: 700;
   letter-spacing: 0.2px;
-  font-family: var(--font-primary); /* brand in Playfair */
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
 }
+
+.logo {
+  height: clamp(28px, 3.8vw, 48px);
+  width: auto;
+  display: block;
+}
+
+.scrolled .logo {
+  height: clamp(26px, 3.2vw, 44px);
+}
+
+/* ===== Hamburger button (mobile) ===== */
+.menuButton {
+  display: none; /* hidden on desktop */
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--fg, #2a2a2a);
+}
+
+.menuButton:focus-visible {
+  outline: 2px solid var(--color-primary-2);
+  outline-offset: 2px;
+}
+
+.menuIcon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* ===== Links (desktop inline) ===== */
+.linksWrapper {
+  display: block;
+}
+
 .links {
   display: flex;
   gap: 20px;
@@ -42,14 +100,104 @@
   margin: 0;
   padding: 0;
 }
+
 .link {
-  color: var(--muted);
-  text-decoration: none;
-  font-weight: 500;
+  color: var(--muted, #6f7b5f);
   font-family: var(--font-secondary);
+  font-weight: 500;
+  text-decoration: none;
 }
+
 .link:hover,
 .link:focus {
-  color: var(--brand);
+  color: var(--brand, var(--color-primary-2));
   outline: none;
+}
+
+.linkActive {
+  color: var(--color-primary-3); /* #be4214 */
+  position: relative;
+}
+
+.linkActive::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: currentColor; /* underline uses the active color */
+  opacity: 0.9;
+}
+
+/* ===== Mobile dropdown behavior ===== */
+@media (max-width: 767px) {
+  .menuButton {
+    display: inline-flex; /* show on mobile */
+  }
+
+  /* Collapse the links into a dropdown panel below the bar */
+  .linksWrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background: var(--color-secondary-1, #fffffe);
+    border-bottom: 1px solid var(--color-secondary-3, #efedec);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 160ms ease, opacity 160ms ease;
+  }
+
+  /* When open, reveal the menu */
+  .open {
+    transform: scaleY(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px; /* interior padding for the panel */
+  }
+
+  .links > li {
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .links > li:first-child {
+    border-top: 0;
+  }
+
+  .link {
+    display: block;
+    padding: 12px 6px;
+    font-size: 0.95rem;
+    color: #2a2a2a; /* better contrast on light dropdown */
+  }
+
+  .link:hover,
+  .link:focus {
+    color: var(--color-primary-3); /* #be4214 */
+  }
+}
+
+/* ===== Larger screens (desktop) ===== */
+@media (min-width: 768px) {
+  .linksWrapper {
+    position: static;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
 }
