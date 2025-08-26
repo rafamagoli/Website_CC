@@ -1,8 +1,10 @@
-import Navbar from '../src/assets/components/navbar/Navbar.jsx'
+// App.jsx — main composition
+import Navbar from './assets/components/navbar/Navbar.jsx'
 import Home from './sections/home/Home.jsx'
+import About from './sections/about/About.jsx'
+import Services from './sections/services/Services.jsx'
 import './index.css'
 import './App.css'
-import About from './sections/about/About.jsx'
 
 export default function App() {
   return (
@@ -11,6 +13,7 @@ export default function App() {
       <main>
         <Home />
         <About />
+        <Services />
       </main>
     </>
   )

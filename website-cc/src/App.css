@@ -55,6 +55,10 @@ main {
   gap: 12px;
 }
 
+.icon-sm { height: 20px; width: auto; display: block; }
+.icon-md { height: 28px; width: auto; display: block; }
+.icon-lg { height: 40px; width: auto; display: block; }
+
 .btn {
   display: inline-block;
   padding: 10px 16px;
