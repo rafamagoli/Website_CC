@@ -1,7 +1,40 @@
 import { motion } from 'framer-motion'
 import styles from './Home.module.css'
+import { useEffect } from 'react'
 
 export default function Home() {
+  useEffect(() => {
+    const section = document.getElementById('home')
+    if (!section) return
+
+    const icons = [
+      '/assets/ICONGREEN.png',
+      '/assets/ICONYELLOW.png',
+      '/assets/ICONRED.png',
+      '/assets/ICONWHITE.png',
+      '/assets/ICONBLACK.png',
+    ]
+
+    function onMouseMove(e) {
+      const iconSrc = icons[Math.floor(Math.random() * icons.length)]
+      const icon = document.createElement('img')
+      icon.src = iconSrc
+      icon.className = styles.floatingIcon
+      icon.style.left = `${e.clientX}px`
+      icon.style.top = `${e.clientY}px`
+      section.appendChild(icon)
+
+      icon.addEventListener('animationend', () => {
+        icon.remove()
+      })
+    }
+
+    section.addEventListener('mousemove', onMouseMove)
+    return () => {
+      section.removeEventListener('mousemove', onMouseMove)
+    }
+  }, [])
+
   return (
     <section id="home" className={`section section--hero ${styles.hero}`}>
       <div className={`container ${styles.heroTop}`}>

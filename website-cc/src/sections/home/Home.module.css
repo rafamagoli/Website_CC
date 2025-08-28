@@ -195,3 +195,17 @@
     height: 80px;
   }
 }
+
+.floatingIcon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  animation: floatUp 1s ease-out forwards;
+  z-index: 100;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-40px); opacity: 0; }
+}

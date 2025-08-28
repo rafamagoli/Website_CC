@@ -11,7 +11,7 @@ body {
   margin: 0;
   font-family: var(--font-secondary);
   color: var(--fg, #2a2a2a);
-  background: linear-gradient(180deg, var(--color-secondary-3, #efedec) 0%, var(--color-secondary-2, #ffedd3) 100%);
+  background: var(--color-secondary-2, #ffedd3); /* global peach background (no gradients) */
 }
 
 h1, h2, h3, h4, h5, h6 {
