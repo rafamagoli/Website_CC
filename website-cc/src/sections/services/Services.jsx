@@ -25,7 +25,7 @@ export default function Services() {
               <li><span className={styles.pointText}><strong>Autonomia emocional</strong> — resultados no tempo certo.</span></li>
             </ul>
             <p className={styles.callout}>
-              👉 O objetivo não é apagar o problema, mas transformar o olhar sobre ele.
+              O objetivo não é apagar o problema, mas transformar o olhar sobre ele.
             </p>
           </div>
         </article>
