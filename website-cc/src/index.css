@@ -5,7 +5,9 @@
 
 * { box-sizing: border-box; }
 html, body, #root { height: 100%; }
-html { scroll-behavior: smooth; }
+html, body { overflow-x: hidden; } /* evita faixa lateral quando elementos usam 100vw */
+#root { display: flex; flex-direction: column; }
+main { flex: 1 0 auto; }
 
 body {
   margin: 0;
@@ -20,3 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a { outline-offset: 2px; }
+
+img, svg, video, canvas { max-width: 100%; height: auto; display: block; }
+:where(a) { text-underline-offset: 2px; }
+html { scroll-behavior: smooth; }

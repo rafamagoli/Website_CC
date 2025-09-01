@@ -1,0 +1,38 @@
+/* icon-only contact row */
+.contactIcons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.contactIcons li { margin: 0; }
+.contactIcons a {
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: rgba(255,255,255,0.02);
+  color: rgba(255,255,255,0.92);   /* cor base branca */
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease, color .2s ease;
+}
+.contactIcons a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  border-color: rgba(255,255,255,0.28);
+  background: rgba(255,255,255,0.04);
+  color: var(--color-primary-2);   /* amarelo brand no hover */
+}
+.contactIcons a:focus-visible {
+  outline: 2px solid var(--color-primary-2);
+  outline-offset: 2px;
+}
+.iconOnly {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex: 0 0 auto;
+}

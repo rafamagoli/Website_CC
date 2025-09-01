@@ -38,7 +38,7 @@ export default function Contact() {
             <div>
               <h3>E-mail</h3>
               <p>Prefere escrever? Envie um e-mail</p>
-              <span className={styles.detail}>Camila_cavaleri@yahoo.com.br</span>
+              <span className={styles.detail}>camila_cavaleri@yahoo.com.br</span>
             </div>
           </a>
         </div>

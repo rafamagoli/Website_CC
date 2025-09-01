@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import styles from './Navbar.module.css'
-import Logo from '../../CCLOGO.png' // ensure: src/assets/CCLOGO.png
+import Logo from '../../CCLOGO.png' 
 
 
 export default function Navbar() {
@@ -8,26 +8,23 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [activeId, setActiveId] = useState('home')
 
-  // define your sections here (IDs must exist in the page)
   const navItems = useMemo(
     () => [
       { id: 'home', label: 'Página Inicial' },
       { id: 'about', label: 'Sobre mim' },
       { id: 'services', label: 'Terapia Breve' },
-      { id: 'portfolio', label: 'Portfólio' },
       { id: 'contact', label: 'Contato' },
+      { id: 'faq', label: 'FAQ' },
     ],
     []
   )
 
-  // header scroll state
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // close menu on resize / Esc
   useEffect(() => {
     const onResize = () => { if (window.innerWidth >= 768) setOpen(false) }
     const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
@@ -39,7 +36,6 @@ export default function Navbar() {
     }
   }, [])
 
-  // scroll spy via IntersectionObserver (fallback para scroll)
   useEffect(() => {
     const sectionEls = navItems
       .map(it => document.getElementById(it.id))
@@ -47,11 +43,9 @@ export default function Navbar() {
 
     if (sectionEls.length === 0) return
 
-    // Prefer IntersectionObserver
     if ('IntersectionObserver' in window) {
       const obs = new IntersectionObserver(
         (entries) => {
-          // choose the most visible entry
           const visible = entries
             .filter(e => e.isIntersecting)
             .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
@@ -59,9 +53,7 @@ export default function Navbar() {
         },
         {
           root: null,
-          // Detect a seção quando 35% visível
           threshold: [0.35, 0.6, 0.85],
-          // Compensar altura aproximada da navbar
           rootMargin: '-64px 0px -40% 0px',
         }
       )
@@ -69,9 +61,8 @@ export default function Navbar() {
       return () => obs.disconnect()
     }
 
-    // Fallback: scroll handler simples
     const onScroll = () => {
-      const offset = 72 // approximate navbar height + margin
+      const offset = 72 
       let current = activeId
       for (const el of sectionEls) {
         const top = el.getBoundingClientRect().top
@@ -87,13 +78,12 @@ export default function Navbar() {
   const toggle = () => setOpen(v => !v)
   const closeMenu = () => setOpen(false)
 
-  // smooth-scroll helper (closes mobile menu and scrolls with offset)
   const handleNavClick = (e, id) => {
     e.preventDefault()
     closeMenu()
     const el = document.getElementById(id)
     if (!el) return
-    const y = el.getBoundingClientRect().top + window.scrollY - 64 // offset navbar
+    const y = el.getBoundingClientRect().top + window.scrollY - 64 
     window.scrollTo({ top: y, behavior: 'smooth' })
   }
 
