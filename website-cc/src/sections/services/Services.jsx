@@ -1,12 +1,19 @@
 import styles from './Services.module.css'
 
 export default function Services() {
+  const gallery = [
+    { src: '/assets/Service1.png', alt: 'Acolhimento e leveza' },
+    { src: '/assets/Service2.png', alt: 'Portas para novos caminhos' },
+    { src: '/assets/Service3.png', alt: 'Texturas suaves e cuidado' },
+    { src: '/assets/Service4.png', alt: 'Simplicidade e presença' },
+  ]
+
   return (
     <section id="services" className={`section ${styles.services}`}>
       <div className="container">
 
-        {/* Header */}
         <header className={styles.header}>
+          <span className={styles.kicker}>Terapia Breve</span>
           <h2 className={styles.title}>O que é Psicologia Breve?</h2>
           <p className={styles.subtitle}>
             Uma abordagem focada no presente, acolhendo sua história para te ajudar a enxergar os desafios com
@@ -14,8 +21,21 @@ export default function Services() {
           </p>
         </header>
 
-        <article className={`${styles.card} ${styles.intro}`}>
-          <div className={styles.cardBody}>
+        <div className={styles.galleryRow}>
+          {gallery.map((g, i) => (
+            <figure key={i} className={styles.galleryItem} tabIndex={0} aria-label={g.alt}>
+              <div className={styles.galleryInner}>
+                <img src={g.src} alt={g.alt} className={styles.galleryFront} />
+                <div className={styles.galleryBack}>
+                  <img src="/assets/ICONGREEN.png" alt="" aria-hidden="true" className={styles.galleryBrandIcon} />
+                </div>
+              </div>
+            </figure>
+          ))}
+        </div>
+
+        <article className={`${styles.contentCard} ${styles.intro}`}>
+          <div className={styles.contentCardBody}>
             <p>
               A Psicologia Breve parte do que te incomoda hoje, acolhendo seu contexto de vida, relações e ciclos.
             </p>
@@ -25,12 +45,12 @@ export default function Services() {
               <li><span className={styles.pointText}><strong>Autonomia emocional</strong> — resultados no tempo certo.</span></li>
             </ul>
             <p className={styles.callout}>
-              O objetivo não é apagar o problema, mas transformar o olhar sobre ele.
+              👉 O objetivo é transformar o olhar sobre o problema.
             </p>
           </div>
         </article>
 
-        {/* Bloco 2 – Como funciona */}
+        {/* Como funciona */}
         <section className={styles.block}>
           <h3 className={styles.blockTitle}>Como funciona</h3>
           <ol className={styles.steps}>
@@ -55,7 +75,7 @@ export default function Services() {
           </ol>
         </section>
 
-        {/* Bloco 3 – Para quem é */}
+        {/* Para quem é */}
         <section className={styles.block}>
           <h3 className={styles.blockTitle}>Para quem é</h3>
           <p className={styles.blockLead}>
@@ -69,7 +89,7 @@ export default function Services() {
           </ul>
         </section>
 
-        {/* Bloco 4 – Benefícios */}
+        {/* Benefícios */}
         <section className={styles.block}>
           <h3 className={styles.blockTitle}>Benefícios</h3>
           <div className={styles.benefitsGrid}>
@@ -88,7 +108,7 @@ export default function Services() {
           </div>
         </section>
 
-        {/* Bloco 5 – CTA */}
+        {/* CTA */}
         <aside className={styles.ctaBanner}>
           <div className={styles.ctaText}>
             <h3 className={styles.ctaTitle}>Quer saber se a Terapia Breve é para você?</h3>
