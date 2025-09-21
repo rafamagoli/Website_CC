@@ -9,7 +9,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 clamp(24px, 4vw, 48px);
 }
 
 /* CTA Section */
@@ -68,13 +68,16 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .logo {
-  width: 85px;
-  height: 85px;
-  border-radius: 14px;
+  height: clamp(40px, 3.4vw, 60px);
+  width: auto;
+  display: block;
+  padding: 0 8px;   
+  object-fit: contain;
+  border-radius: 14px; 
 }
 
 .brandName {
