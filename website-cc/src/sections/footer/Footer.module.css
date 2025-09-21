@@ -1,38 +1,213 @@
-/* icon-only contact row */
-.contactIcons {
-  display: flex;
-  gap: 12px;
-  align-items: center;
+/* Footer - Melhorando gradualmente */
+.footer {
+  background: linear-gradient(135deg, #1f2618 0%, #24331a 100%);
+  color: white;
+  padding: 50px 0 25px;
+  border-top: 3px solid #f1ae2f;
 }
-.contactIcons li { margin: 0; }
-.contactIcons a {
-  width: 36px;
-  height: 36px;
-  padding: 6px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.16);
-  display: inline-flex;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* CTA Section */
+.cta {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 35px;
+  border-radius: 16px;
+  margin-bottom: 45px;
+  text-align: center;
+  border: 1px solid rgba(241, 174, 47, 0.2);
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f1ae2f;
+  margin: 0 0 18px 0;
+  line-height: 1.3;
+}
+
+.ctaText {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 28px 0;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, #f1ae2f 0%, #e6a229 100%);
+  color: #1f2618;
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(241, 174, 47, 0.25);
+}
+
+.ctaButton:hover {
+  background: linear-gradient(135deg, #e6a229 0%, #d19322 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(241, 174, 47, 0.35);
+}
+
+/* Main Content */
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 45px;
+  margin-bottom: 40px;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 85px;
+  height: 85px;
+  border-radius: 14px;
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: white;
+}
+
+.brandMeta {
+  font-size: 1rem;
+  color: #f1ae2f;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Sections */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sectionTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #f1ae2f, rgba(241, 174, 47, 0.3));
+}
+
+/* Contacts */
+.contacts {
+  display: flex;
+  gap: 15px;
+}
+
+.contact {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.contact:hover {
+  color: #f1ae2f;
+  background: rgba(241, 174, 47, 0.12);
+  border-color: rgba(241, 174, 47, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(241, 174, 47, 0.2);
+}
+
+.contactIcon {
+  width: 22px;
+  height: 22px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav a {
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  background: rgba(255,255,255,0.02);
-  color: rgba(255,255,255,0.92);   /* cor base branca */
-  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease, color .2s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
-.contactIcons a:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-  border-color: rgba(255,255,255,0.28);
-  background: rgba(255,255,255,0.04);
-  color: var(--color-primary-2);   /* amarelo brand no hover */
+
+.nav a:hover {
+  color: #f1ae2f;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(4px);
 }
-.contactIcons a:focus-visible {
-  outline: 2px solid var(--color-primary-2);
-  outline-offset: 2px;
+
+/* Bottom */
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  gap: 24px;
 }
-.iconOnly {
-  width: 18px;
-  height: 18px;
-  display: block;
-  flex: 0 0 auto;
+
+.bottom a {
+  color: #f1ae2f;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.bottom a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(241, 174, 47, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .brand {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }

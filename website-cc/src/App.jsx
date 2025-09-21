@@ -18,7 +18,6 @@ export default function App() {
         <Services />
         <Contact />
         <FAQ /> 
-        <Footer /> 
       </main>
       <Footer /> 
     </>
