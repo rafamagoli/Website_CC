@@ -49,7 +49,7 @@ export default function Footer() {
                   <path d="M9.5 10.5c.4 1.2 1.3 2.2 2.5 2.8l.6-.6a1 1 0 011.1-.2l2 .8a1 1 0 01.6 1.1c-.3 1.4-1.8 2-3.2 1.6A7.5 7.5 0 018 9.1c-.4-1.4.2-2.9 1.6-3.2a1 1 0 011.1.6l.8 2a1 1 0 01-.2 1.1l-.6.6z" fill="currentColor"/>
                 </svg>
               </a>
-              <a href="mailto:Camila_cavaleri@yahoo.com.br" className={styles.contact} title="E-mail">
+              <a href="mailto:camila_cavaleri@yahoo.com.br" className={styles.contact} title="E-mail">
                 <svg viewBox="0 0 24 24" className={styles.contactIcon}>
                   <rect x="3" y="5" width="18" height="14" rx="2" ry="2" fill="none" stroke="currentColor" strokeWidth="2"/>
                   <path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>

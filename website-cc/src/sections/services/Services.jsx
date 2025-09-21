@@ -1,6 +1,9 @@
+import { useEffect, useRef } from 'react'
 import styles from './Services.module.css'
 
 export default function Services() {
+  const sectionRef = useRef(null)
+  
   const gallery = [
     { src: '/assets/Service1.png', alt: 'Acolhimento e leveza' },
     { src: '/assets/Service2.png', alt: 'Portas para novos caminhos' },
@@ -8,8 +11,32 @@ export default function Services() {
     { src: '/assets/Service4.png', alt: 'Simplicidade e presença' },
   ]
 
+  // Adiciona animação de entrada quando a seção fica visível
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running'
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section id="services" className={`section ${styles.services}`}>
+    <section 
+      id="services" 
+      className={`section ${styles.services}`}
+      ref={sectionRef}
+    >
       <div className="container">
 
         <header className={styles.header}>
@@ -23,11 +50,28 @@ export default function Services() {
 
         <div className={styles.galleryRow}>
           {gallery.map((g, i) => (
-            <figure key={i} className={styles.galleryItem} tabIndex={0} aria-label={g.alt}>
+            <figure 
+              key={i} 
+              className={styles.galleryItem} 
+              style={{ '--i': i }}
+              tabIndex={0} 
+              aria-label={g.alt}
+              role="button"
+            >
               <div className={styles.galleryInner}>
-                <img src={g.src} alt={g.alt} className={styles.galleryFront} />
+                <img 
+                  src={g.src} 
+                  alt={g.alt} 
+                  className={styles.galleryFront}
+                  loading="lazy"
+                />
                 <div className={styles.galleryBack}>
-                  <img src="/assets/ICONGREEN.png" alt="" aria-hidden="true" className={styles.galleryBrandIcon} />
+                  <img 
+                    src="/assets/ICONGREEN.png" 
+                    alt="" 
+                    aria-hidden="true" 
+                    className={styles.galleryBrandIcon} 
+                  />
                 </div>
               </div>
             </figure>
@@ -40,13 +84,25 @@ export default function Services() {
               A Psicologia Breve parte do que te incomoda hoje, acolhendo seu contexto de vida, relações e ciclos.
             </p>
             <ul className={styles.points}>
-              <li><span className={styles.pointText}><strong>Clareza no presente</strong> — foco no que está vivo agora.</span></li>
-              <li><span className={styles.pointText}><strong>Direção com leveza</strong> — enxergar o problema de outra forma.</span></li>
-              <li><span className={styles.pointText}><strong>Autonomia emocional</strong> — resultados no tempo certo.</span></li>
+              <li>
+                <span className={styles.pointText}>
+                  <strong>Clareza no presente</strong> — foco no que está vivo agora.
+                </span>
+              </li>
+              <li>
+                <span className={styles.pointText}>
+                  <strong>Direção com leveza</strong> — enxergar o problema de outra forma.
+                </span>
+              </li>
+              <li>
+                <span className={styles.pointText}>
+                  <strong>Autonomia emocional</strong> — resultados no tempo certo.
+                </span>
+              </li>
             </ul>
-            <p className={styles.callout}>
-              👉 O objetivo é transformar o olhar sobre o problema.
-            </p>
+            <div className={styles.callout}>
+              O objetivo é transformar o olhar sobre o problema.
+            </div>
           </div>
         </article>
 
@@ -57,29 +113,32 @@ export default function Services() {
             <li className={styles.step}>
               <div className={`${styles.badge} ${styles.badgeGreen}`}>1</div>
               <div className={styles.stepText}>
-                <strong>Não começamos do zero.</strong> Trabalhamos o que está vivo agora em você.
+                <strong>Não começamos do zero.</strong><br />
+                Trabalhamos o que está vivo agora em você.
               </div>
             </li>
             <li className={styles.step}>
               <div className={`${styles.badge} ${styles.badgeYellow}`}>2</div>
               <div className={styles.stepText}>
-                <strong>Com começo, meio e fim.</strong> Estruturada para resultados no tempo certo.
+                <strong>Com começo, meio e fim.</strong><br />
+                Estruturada para resultados no tempo certo.
               </div>
             </li>
             <li className={styles.step}>
               <div className={`${styles.badge} ${styles.badgeRed}`}>3</div>
               <div className={styles.stepText}>
-                <strong>Direcionada com respeito.</strong> Honramos sua história, limites e ritmo.
+                <strong>Direcionada com respeito.</strong><br />
+                Honramos sua história, limites e ritmo.
               </div>
             </li>
           </ol>
         </section>
 
         {/* Para quem é */}
-        <section className={styles.block}>
+        <section className={`${styles.block} ${styles.audienceSection}`}>
           <h3 className={styles.blockTitle}>Para quem é</h3>
-          <p className={styles.blockLead}>
-            Indicada especialmente para mulheres em fases de transformação:
+          <p className={styles.audienceIntro}>
+            Indicada especialmente para mulheres em fases de transformação
           </p>
           <ul className={styles.chips}>
             <li>🌿 Maternidade</li>
@@ -90,8 +149,11 @@ export default function Services() {
         </section>
 
         {/* Benefícios */}
-        <section className={styles.block}>
+        <section className={`${styles.block} ${styles.benefitsSection}`}>
           <h3 className={styles.blockTitle}>Benefícios</h3>
+          <p className={styles.benefitsIntro}>
+            Resultados que você pode esperar ao longo do processo terapêutico
+          </p>
           <div className={styles.benefitsGrid}>
             {[
               'Redução da ansiedade e do estresse',
@@ -99,10 +161,16 @@ export default function Services() {
               'Relações mais equilibradas',
               'Reconexão com seus limites e desejos',
               'Mais autoconfiança e clareza emocional'
-            ].map((b) => (
-              <div key={b} className={styles.benefitItem}>
-                <img src="/assets/ICONGREEN.png" alt="" className={styles.icon} aria-hidden="true" />
-                <span>{b}</span>
+            ].map((benefit, index) => (
+              <div key={benefit} className={styles.benefitItem}>
+                <div className={styles.benefitIcon}>
+                  <img 
+                    src="/assets/ICONGREEN.png" 
+                    alt="" 
+                    aria-hidden="true" 
+                  />
+                </div>
+                <span className={styles.benefitText}>{benefit}</span>
               </div>
             ))}
           </div>
@@ -114,7 +182,13 @@ export default function Services() {
             <h3 className={styles.ctaTitle}>Quer saber se a Terapia Breve é para você?</h3>
             <p className={styles.ctaSubtitle}>Te convido para uma primeira conversa acolhedora.</p>
           </div>
-          <a href="#contact" className="btn">Agende sua sessão</a>
+          <a 
+            href="#contact" 
+            className="btn"
+            aria-label="Agendar sessão de terapia breve"
+          >
+            Agende sua sessão
+          </a>
         </aside>
       </div>
     </section>
