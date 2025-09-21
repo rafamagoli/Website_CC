@@ -159,6 +159,7 @@ export default function Services() {
               'Redução da ansiedade e do estresse',
               'Melhora da qualidade do sono',
               'Relações mais equilibradas',
+              'Autonomia para enfrentar desafios futuros',
               'Reconexão com seus limites e desejos',
               'Mais autoconfiança e clareza emocional'
             ].map((benefit, index) => (
