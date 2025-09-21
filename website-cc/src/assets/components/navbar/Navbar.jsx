@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from 'react'
 import styles from './Navbar.module.css'
 import Logo from '../../CCLOGO.png' 
 
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -44,6 +43,9 @@ export default function Navbar() {
     if (sectionEls.length === 0) return
 
     if ('IntersectionObserver' in window) {
+      const cssOffset =
+        parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-offset'), 10) || 0
+
       const obs = new IntersectionObserver(
         (entries) => {
           const visible = entries
@@ -54,7 +56,7 @@ export default function Navbar() {
         {
           root: null,
           threshold: [0.35, 0.6, 0.85],
-          rootMargin: '-64px 0px -40% 0px',
+          rootMargin: `-${cssOffset}px 0px -40% 0px`,
         }
       )
       sectionEls.forEach(el => obs.observe(el))
@@ -62,11 +64,12 @@ export default function Navbar() {
     }
 
     const onScroll = () => {
-      const offset = 72 
+      const cssOffset =
+        parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-offset'), 10) || 0
       let current = activeId
       for (const el of sectionEls) {
         const top = el.getBoundingClientRect().top
-        if (top - offset <= 0) current = el.id
+        if (top - cssOffset <= 0) current = el.id
       }
       setActiveId(current)
     }
@@ -79,19 +82,62 @@ export default function Navbar() {
   const closeMenu = () => setOpen(false)
 
   const handleNavClick = (e, id) => {
+    if (e.ctrlKey || e.metaKey || e.altKey || e.shiftKey || e.button !== 0) return
+
     e.preventDefault()
     closeMenu()
+
+    const hash = `#${id}`
     const el = document.getElementById(id)
-    if (!el) return
-    const y = el.getBoundingClientRect().top + window.scrollY - 64 
-    window.scrollTo({ top: y, behavior: 'smooth' })
+    const smooth =
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: no-preference)').matches
+        ? 'smooth'
+        : 'auto'
+
+    if (el && typeof el.scrollIntoView === 'function') {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          el.scrollIntoView({ behavior: smooth, block: 'start' })
+          if (history.replaceState) {
+            history.replaceState(null, '', hash)
+          } else {
+            location.hash = hash
+          }
+        })
+      })
+      return
+    }
+
+    if (!el) {
+      location.hash = hash
+      return
+    }
+
+    const rect = el.getBoundingClientRect()
+    const rootStyles = getComputedStyle(document.documentElement)
+    const cssOffset = parseInt(rootStyles.getPropertyValue('--nav-offset'), 10) || 0
+    const y = rect.top + window.pageYOffset - cssOffset
+
+    window.scrollTo({ top: y, behavior: smooth })
+    if (history.replaceState) history.replaceState(null, '', hash)
   }
 
   return (
     <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <nav className={styles.inner}>
-        <a className={styles.brand} href="#home" aria-label="Go to Home" onClick={(e) => handleNavClick(e, 'home')}>
-          <img src={Logo} alt="Camila Cavaleri Logo" className={styles.logo} decoding="async" />
+        <a
+          className={styles.brand}
+          href="#home"
+          aria-label="Go to Home"
+          onClick={(e) => handleNavClick(e, 'home')}
+        >
+          <img
+            src={Logo}
+            alt="Camila Cavaleri Logo"
+            className={styles.logo}
+            decoding="async"
+          />
         </a>
 
         <button
@@ -102,7 +148,13 @@ export default function Navbar() {
           onClick={toggle}
           type="button"
         >
-          <svg className={styles.menuIcon} viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <svg
+            className={styles.menuIcon}
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            aria-hidden="true"
+          >
             {open ? (
               <path d="M18.3 5.7L12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3 1.4 1.4z" />
             ) : (
