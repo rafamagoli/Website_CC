@@ -83,7 +83,7 @@ export default function Footer() {
           <p>© {year} Camila Cavaleri. Todos os direitos reservados.</p>
           <p>
             Site feito por{' '}
-            <a href="https://www.instagram.com/rafamagoli" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/rafaela-oliveiram" target="_blank" rel="noopener noreferrer">
               Rafaela Magalhães
             </a>
           </p>
