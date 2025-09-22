@@ -24,7 +24,6 @@ export default function Footer() {
           </a>
         </div>
 
-        {/* Conteúdo Principal */}
         <div className={styles.content}>
           {/* Brand */}
           <div className={styles.brand}>
@@ -39,7 +38,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contato */}
           <div className={styles.section}>
             <h4 className={styles.sectionTitle}>Contato</h4>
             <div className={styles.contacts}>
@@ -65,7 +63,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navegação */}
           <div className={styles.section}>
             <h4 className={styles.sectionTitle}>Navegação</h4>
             <div className={styles.nav}>

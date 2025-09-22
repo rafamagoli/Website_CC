@@ -1,16 +1,13 @@
-/* HOME HERO MODERNIZADA */
+/* HOME HERO */
 .hero { 
   padding-top: 140px;
-  /* background removido para mostrar o fundo global creme */
   position: relative;
   min-height: 85vh;
   display: flex;
   align-items: center;
 }
 
-/* Removido - fundo completamente limpo */
 
-/* CONTAINER PRINCIPAL */
 .heroTop {
   text-align: center;
   position: relative;
@@ -19,7 +16,6 @@
   margin: 0 auto;
 }
 
-/* LOGO SECTION MODERNIZADA */
 .logoRow {
   display: flex;
   align-items: center;
@@ -92,7 +88,6 @@
   transform: rotate(15deg) scale(1.1);
 }
 
-/* TÍTULO PRINCIPAL MODERNIZADO */
 .heroTitle {
   font-family: var(--font-primary);
   font-size: clamp(28px, 4.5vw, 48px);
@@ -125,7 +120,6 @@
   opacity: 0.7;
 }
 
-/* SUBTÍTULO */
 .heroSubtitle {
   font-family: var(--font-secondary);
   color: var(--muted);
@@ -138,7 +132,6 @@
   position: relative;
 }
 
-/* BOTÃO CTA MODERNIZADO */
 .ctaButton {
   display: inline-flex;
   align-items: center;
@@ -203,7 +196,6 @@
   transform: translateX(4px);
 }
 
-/* FEATURES/BENEFÍCIOS DESTACADOS */
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -327,7 +319,6 @@
   text-align: center;
 }
 
-/* ÍCONES FLUTUANTES MELHORADOS */
 .floatingIcon {
   position: absolute;
   width: 16px;

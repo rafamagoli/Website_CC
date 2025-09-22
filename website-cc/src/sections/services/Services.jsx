@@ -11,7 +11,6 @@ export default function Services() {
     { src: '/assets/Service4.png', alt: 'Simplicidade e presença' },
   ]
 
-  // Adiciona animação de entrada quando a seção fica visível
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -106,7 +105,6 @@ export default function Services() {
           </div>
         </article>
 
-        {/* Como funciona */}
         <section className={styles.block}>
           <h3 className={styles.blockTitle}>Como funciona</h3>
           <ol className={styles.steps}>
@@ -134,7 +132,6 @@ export default function Services() {
           </ol>
         </section>
 
-        {/* Para quem é */}
         <section className={`${styles.block} ${styles.audienceSection}`}>
           <h3 className={styles.blockTitle}>Para quem é</h3>
           <p className={styles.audienceIntro}>
@@ -148,7 +145,6 @@ export default function Services() {
           </ul>
         </section>
 
-        {/* Benefícios */}
         <section className={`${styles.block} ${styles.benefitsSection}`}>
           <h3 className={styles.blockTitle}>Benefícios</h3>
           <p className={styles.benefitsIntro}>

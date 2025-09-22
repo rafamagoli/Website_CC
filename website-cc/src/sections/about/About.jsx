@@ -5,7 +5,6 @@ export default function About() {
   const sectionRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
 
-  // Animação de entrada quando a seção fica visível
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -47,13 +46,11 @@ export default function About() {
                 />
               </div>
               
-              {/* Elementos decorativos */}
               <div className={styles.decorativeElement}></div>
               <div className={styles.decorativeElement}></div>
               <div className={styles.decorativeElement}></div>
             </div>
             
-            {/* Credenciais */}
             <div className={styles.credentials}>
               <div className={styles.credentialItem}>
                 <img 
@@ -103,7 +100,6 @@ export default function About() {
               reconexão consigo mesma e de abertura para novos caminhos.
             </p>
 
-            {/* Diferenciais/Valores */}
             <div className={styles.stats}>
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>🌱</span>

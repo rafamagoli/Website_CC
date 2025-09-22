@@ -5,7 +5,7 @@
 
 * { box-sizing: border-box; }
 html, body, #root { height: 100%; }
-html, body { overflow-x: hidden; } /* evita faixa lateral quando elementos usam 100vw */
+html, body { overflow-x: hidden; } 
 #root { display: flex; flex-direction: column; }
 main { flex: 1 0 auto; }
 
