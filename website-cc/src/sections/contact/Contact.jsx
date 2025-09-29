@@ -213,7 +213,7 @@ export default function Contact() {
 
             {/* Email Card */}
             <motion.a
-              href="mailto:camilacavaleri@yahoo.com?subject=Consulta Terapia Breve&body=Olá, Camila! Gostaria de agendar uma consulta."
+              href="mailto:camila_cavaleri@yahoo.com?subject=Consulta Terapia Breve&body=Olá, Camila! Gostaria de agendar uma consulta."
               className={`${styles.card} ${styles.email}`}
               variants={cardVariants}
               whileHover={{ 
@@ -240,7 +240,7 @@ export default function Contact() {
                 <h3 className={styles.cardTitle}>E-mail</h3>
                 <p className={styles.cardDescription}>Para uma conversa mais detalhada</p>
                 <span className={styles.cardDetail}>
-                  camilacavaleri@yahoo.com
+                  camila_cavaleri@yahoo.com
                 </span>
               </div>
               
