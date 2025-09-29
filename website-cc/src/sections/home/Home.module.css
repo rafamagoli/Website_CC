@@ -367,52 +367,33 @@
 }
 
 @media (max-width: 640px) {
-  .hero { 
-    padding-top: 100px;
-    min-height: 60vh;
-  }
-  
-  .logoPart {
-    height: 100px;
-  }
-  
   .logoRow {
-    gap: 12px;
-    margin-bottom: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 6px;
+    margin-bottom: 20px;
   }
-  
-  .ctaButton {
-    padding: 14px 28px;
-    font-size: 15px;
+
+  .logoRow > :first-child {
+    margin-bottom: -12px;
+    line-height: 0;
   }
-  
-  .socialProof {
-    margin-top: 32px;
-    padding: 20px;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+  .logoRight {
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: -4px;
   }
-  
-  .features {
-    gap: 12px;
-  }
-  
-  .feature {
-    padding: 16px;
+
+  .logoRight::after {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .logoPart {
-    height: 80px;
-  }
-  
-  .logoRow {
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .logoRight {
-    gap: 6px;
-  }
+  .logoPart { height: 80px; }
+  .icon { height: 22px; }
 }
