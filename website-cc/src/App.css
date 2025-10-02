@@ -30,7 +30,7 @@ main {
 }
 
 .section--hero {
-  padding: 96px 0 72px;
+  padding: clamp(16px, 6vh, 56px) 0 64px;
 }
 
 .container {

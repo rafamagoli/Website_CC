@@ -1,6 +1,6 @@
 /* HOME HERO */
 .hero { 
-  padding-top: 140px;
+  padding-top: clamp(0px, 4vh, 32px);
   position: relative;
   min-height: 85vh;
   display: flex;
