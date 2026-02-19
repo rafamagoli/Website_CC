@@ -79,7 +79,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
         >
-          ATENDIMENTO ONLINE PARA ADULTOS
+          ATENDIMENTO ONLINE E PRESENCIAL EM VITÓRIA - ES
         </motion.p>
 
         {/* Headline */}
