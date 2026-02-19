@@ -3,6 +3,7 @@ import Home from './sections/home/Home.jsx'
 import About from './sections/about/About.jsx'
 import Services from './sections/services/Services.jsx'
 import Contact from './sections/contact/Contact.jsx'
+import Interview from './sections/interview/Interview.jsx'
 import FAQ from './sections/faq/FAQ.jsx'   
 import Footer from './sections/footer/Footer.jsx'
 import './index.css'
@@ -17,6 +18,7 @@ export default function App() {
         <About />
         <Services />
         <Contact />
+        <Interview />
         <FAQ /> 
       </main>
       <Footer /> 
