@@ -29,28 +29,28 @@ const questions = [
     icon: '/assets/ICONGREEN.png',
     category: 'Modalidade',
     q: 'Atende online ou presencial?',
-    a: 'Atendimento online por vídeo chamada. Assim, posso cuidar de você onde quer que esteja, com mais flexibilidade e conforto.'
+    a: 'Ambos, atendimento presencial em Vitória - Espírito Santo ou atendimento online por vídeo chamada, assim posso cuidar de você onde quer que esteja, com mais flexibilidade e conforto.'
   },
   {
     id: 5,
     icon: '/assets/ICONYELLOW.png',
     category: 'Adequação',
     q: 'Como saber se a Psicologia Breve é para mim?',
-    a: 'Se você busca clareza para um tema específico e deseja um processo estruturado, com direção e metas realistas, a Psicologia Breve é um bom caminho.'
+    a: 'Se você busca clareza para um tema específico e deseja um processo estruturado com direção, a Psicologia Breve é um bom caminho.'
   },
   {
     id: 6,
     icon: '/assets/ICONRED.png',
     category: 'Processo',
     q: 'O que posso esperar entre as sessões?',
-    a: 'Convites de reflexão e pequenas práticas de autocuidado que ajudam a levar o que acontece no consultório para a vida. Sem cobranças excessivas: consciência e gentileza com o seu tempo.'
+    a: 'Convites de reflexão e pequenas práticas que ajudam a levar o que acontece no consultório para a vida. Sem cobranças excessivas: consciência e gentileza com o seu tempo.'
   },
   {
     id: 7,
     icon: '/assets/ICONGREEN.png',
     category: 'Resultados',
     q: 'Como são definidos objetivos e resultados?',
-    a: 'Juntas(os), traduzimos o que te incomoda hoje em objetivos claros e alcançáveis. Ao longo do processo, revisitamos esses objetivos para acompanhar o que já ganhou leveza e o que ainda precisa de cuidado.'
+    a: 'Juntas(os), traduzimos o que te incomoda hoje em objetivos claros e alcançáveis. Ao longo do processo, revisitamos esses objetivos para acompanhar os que já estão mais claros e os que ainda precisam de cuidado.'
   },
   {
     id: 8,

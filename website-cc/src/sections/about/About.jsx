@@ -88,16 +88,16 @@ export default function About() {
             </p>
             
             <p className={styles.body}>
-              Minha trajetória foi marcada por um olhar atento às pessoas, suas
-              histórias e seus ciclos de vida. Essa vivência fortaleceu meu
-              propósito: <span className={styles.highlight}>ajudar mulheres em fases de transformação</span> a encontrarem
-              clareza, leveza e autonomia através da Psicologia Breve.
+              Em minha trajetória, passei por ritos transformadores. Migrei, gestei, pari e maternei em tempo integral por 3 anos, 
+              retornei ao meu País de origem com nova roupagem, abri caminhos profissionais e sigo na construção e reconstrução de 
+              quem sou e quero me tornar. Essas vivências fortaleceram meu
+              propósito: <span className={styles.highlight}>ajudar pessoas em fases de transformação</span> a encontrarem
+              clareza, leveza e autonomia.
             </p>
-            
             <p className={styles.body}>
               Com empatia e escuta ativa, ofereço um espaço seguro e
               direcionado, onde cada encontro se torna uma oportunidade de
-              reconexão consigo mesma e de abertura para novos caminhos.
+              reconexão consigo e de abertura para novos caminhos.
             </p>
 
             <div className={styles.stats}>

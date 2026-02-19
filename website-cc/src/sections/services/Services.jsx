@@ -135,13 +135,13 @@ export default function Services() {
         <section className={`${styles.block} ${styles.audienceSection}`}>
           <h3 className={styles.blockTitle}>Para quem é</h3>
           <p className={styles.audienceIntro}>
-            Indicada especialmente para mulheres em fases de transformação
+            Indicada especialmente para pessoas em fases de transformação
           </p>
           <ul className={styles.chips}>
             <li>🌿 Maternidade</li>
             <li>🌿 Recomeços pessoais ou profissionais</li>
             <li>🌿 Lutos e despedidas</li>
-            <li>🌿 Encontros e reencontros consigo mesma</li>
+            <li>🌿 Imigrantes</li>
           </ul>
         </section>
 
@@ -152,7 +152,7 @@ export default function Services() {
           </p>
           <div className={styles.benefitsGrid}>
             {[
-              'Redução da ansiedade e do estresse',
+              'Lidar melhor com a ansiedade e o estresse',
               'Melhora da qualidade do sono',
               'Relações mais equilibradas',
               'Autonomia para enfrentar desafios futuros',

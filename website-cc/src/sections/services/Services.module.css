@@ -685,9 +685,15 @@
   .contentCardBody { padding: 24px; }
   .step { padding: 20px 16px; }
   .ctaBanner { padding: 24px 20px; }
+  .chips {
+    justify-content: flex-start;
+    margin: 0;
+    max-width: 100%;
+  }
   .chips li {
     padding: 14px 20px;
     font-size: 14px;
+    text-align: left;
   }
   .benefitItem {
     padding: 16px 0;

@@ -33,7 +33,6 @@ export default function Footer() {
               className={styles.logo}
             />
             <div>
-              <h3 className={styles.brandName}>Camila Cavaleri</h3>
               <p className={styles.brandMeta}>Psicologia Breve • CRP 16/11890</p>
             </div>
           </div>
@@ -80,8 +79,8 @@ export default function Footer() {
           <p>© {year} Camila Cavaleri. Todos os direitos reservados.</p>
           <p>
             Site feito por{' '}
-            <a href="https://www.linkedin.com/in/rafaela-oliveiram" target="_blank" rel="noopener noreferrer">
-              Rafaela Magalhães
+            <a href="https://www.instagram.com/lyradigitalstudio" target="_blank" rel="noopener noreferrer">
+              Lyra • Digital Studio
             </a>
           </p>
         </div>
