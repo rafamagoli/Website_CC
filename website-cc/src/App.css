@@ -33,6 +33,12 @@ main {
   padding: clamp(36px, 9vh, 96px) 0 64px;
 }
 
+@media (max-width: 640px) {
+  .section--hero {
+    padding: 20px 0 44px;
+  }
+}
+
 .container {
   max-width: 1080px;
   margin: 0 auto;
