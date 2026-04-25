@@ -18,6 +18,7 @@ const Contato = lazy(() => import('./pages/Contato.jsx'))
 function HomePage() {
   return (
     <Suspense fallback={null}>
+      <Home />
       <Interview />
       <FAQ />
     </Suspense>
