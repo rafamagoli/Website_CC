@@ -179,8 +179,8 @@ export default function Services() {
             <h3 className={styles.ctaTitle}>Quer saber se a Terapia Breve é para você?</h3>
             <p className={styles.ctaSubtitle}>Te convido para uma primeira conversa acolhedora.</p>
           </div>
-          <a 
-            href="#contact" 
+          <a
+            href="/contato"
             className="btn"
             aria-label="Agendar sessão de terapia breve"
           >

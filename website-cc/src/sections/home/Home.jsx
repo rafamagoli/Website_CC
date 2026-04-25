@@ -59,9 +59,9 @@ export default function Home() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
         >
-          <img src="/assets/CAMILA.png" alt="Camila" className={styles.logoPart} />
+          <span className={styles.logoText}>Camila</span>
           <div className={styles.logoRight}>
-            <img src="/assets/CAVALERI.png" alt="Cavaleri" className={styles.logoPart} />
+            <span className={styles.logoText}>Cavaleri</span>
             <motion.img
               src="/assets/ICONRED.png"
               alt=""
@@ -89,7 +89,7 @@ export default function Home() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.45 }}
         >
-          <mark className={styles.heroTitleMark}>Psicologia Breve</mark>: clareza e transformação no tempo certo
+          Psicóloga clínica e avaliadora psicológica
         </motion.h1>
 
         {/* Subtitle */}
@@ -99,7 +99,7 @@ export default function Home() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.6 }}
         >
-          Um espaço seguro, focado e com direção para lidar com o que hoje te incomoda.
+          Um espaço seguro para lidar com o que hoje te incomoda e entender quem você realmente é.
         </motion.p>
 
         {/* CTA */}
@@ -110,7 +110,7 @@ export default function Home() {
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.75 }}
         >
           <motion.a
-            href="#contact"
+            href="/contato"
             className={styles.ctaButton}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}
@@ -124,8 +124,8 @@ export default function Home() {
               />
             </svg>
           </motion.a>
-          <a href="#services" className={styles.ctaButtonGhost}>
-            Entenda como funciona
+          <a href="/servicos" className={styles.ctaButtonGhost}>
+            Conhecer os serviços
           </a>
         </motion.div>
 

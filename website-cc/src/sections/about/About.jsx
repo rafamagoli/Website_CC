@@ -59,7 +59,7 @@ export default function About() {
                   className={styles.credentialIcon}
                   aria-hidden="true"
                 />
-                <span>CRP 06/123456</span>
+                <span>CRP 16/11890</span>
               </div>
               <div className={styles.credentialItem}>
                 <img 
@@ -68,7 +68,7 @@ export default function About() {
                   className={styles.credentialIcon}
                   aria-hidden="true"
                 />
-                <span>Especialista em Terapia Breve</span>
+                <span>Psicologia Clínica e Avaliação Psicológica</span>
               </div>
             </div>
           </div>
@@ -82,22 +82,24 @@ export default function About() {
             </h2>
             
             <p className={styles.lead}>
-              Sou psicóloga especializada em <strong>Psicologia Breve</strong>, uma
-              abordagem focada em acolher o presente e transformar o modo como
-              você enxerga seus desafios.
+              Sou psicóloga clínica e avaliadora psicológica. Atuo no
+              atendimento individual com <strong>Psicologia Breve</strong> e
+              na realização de <strong>avaliações psicológicas</strong> para
+              questões do neurodesenvolvimento.
             </p>
-            
+
             <p className={styles.body}>
-              Em minha trajetória, passei por ritos transformadores. Migrei, gestei, pari e maternei em tempo integral por 3 anos, 
-              retornei ao meu País de origem com nova roupagem, abri caminhos profissionais e sigo na construção e reconstrução de 
+              Em minha trajetória, passei por ritos transformadores. Migrei, gestei, pari e maternei em tempo integral por 3 anos,
+              retornei ao meu País de origem com nova roupagem, abri caminhos profissionais e sigo na construção e reconstrução de
               quem sou e quero me tornar. Essas vivências fortaleceram meu
               propósito: <span className={styles.highlight}>ajudar pessoas em fases de transformação</span> a encontrarem
               clareza, leveza e autonomia.
             </p>
             <p className={styles.body}>
               Com empatia e escuta ativa, ofereço um espaço seguro e
-              direcionado, onde cada encontro se torna uma oportunidade de
-              reconexão consigo e de abertura para novos caminhos.
+              direcionado, seja no acompanhamento clínico ou na investigação
+              diagnóstica rigorosa, onde cada encontro se torna uma
+              oportunidade de reconexão consigo.
             </p>
 
             <div className={styles.stats}>

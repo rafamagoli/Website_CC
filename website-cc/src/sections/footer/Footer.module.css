@@ -71,13 +71,32 @@
   gap: 24px;
 }
 
-.logo {
-  height: clamp(40px, 3.4vw, 60px);
+.brandNameWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.brandLine {
+  font-family: var(--font-primary);
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 600;
+  letter-spacing: -0.078em;
+  color: white;
+  display: block;
+}
+
+.brandLineWithIcon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brandIcon {
+  height: 18px;
   width: auto;
   display: block;
-  padding: 0 8px;   
-  object-fit: contain;
-  border-radius: 14px; 
 }
 
 .brandName {
@@ -206,6 +225,12 @@
   .brand {
     justify-content: center;
     text-align: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .brandNameWrap {
+    align-items: center;
   }
   
   .bottom {

@@ -16,17 +16,25 @@
   --fg: #2a2a2a;                 /* neutral dark for readability */
   --muted: #6f7b5f;              /* softened from primary-1 */
   --brand: var(--color-primary-2);/* accent color (buttons/links) */
+
+  /* Spacing */
+  --section-gap: 120px;
+  --section-gap-mobile: 72px;
 }
 
 main {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 16px 80px;
+  width: 100%;
 }
 
 .section {
-  padding: 72px 0;
+  padding: var(--section-gap) 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--section-gap-mobile) 0;
+  }
 }
 
 .section--hero {

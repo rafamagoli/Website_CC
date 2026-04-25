@@ -27,11 +27,18 @@ export default function Footer() {
         <div className={styles.content}>
           {/* Brand */}
           <div className={styles.brand}>
-            <img 
-              src="/assets/CCLOGO.png" 
-              alt="Camila Cavaleri" 
-              className={styles.logo}
-            />
+            <div className={styles.brandNameWrap} aria-label="Camila Cavaleri">
+              <span className={styles.brandLine}>Camila</span>
+              <span className={styles.brandLineWithIcon}>
+                <span className={styles.brandLine}>Cavaleri</span>
+                <img
+                  src="/assets/ICONRED.png"
+                  alt=""
+                  className={styles.brandIcon}
+                  aria-hidden="true"
+                />
+              </span>
+            </div>
             <div>
               <p className={styles.brandMeta}>Psicologia Breve • CRP 16/11890</p>
             </div>
