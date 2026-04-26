@@ -35,7 +35,7 @@ export default function Interview() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <img
-              src="/assets/CamilaInterview.png"
+              src="/assets/CamilaInterview.webp"
               alt="Camila Cavaleri em entrevista no Jornal da TV Vitória"
               className={styles.mediaImage}
               loading="lazy"

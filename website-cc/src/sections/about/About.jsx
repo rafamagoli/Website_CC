@@ -38,8 +38,8 @@ export default function About() {
             <div className={styles.photoWrapper}>
               <div className={styles.photoCircle}>
                 <img
-                  src="/assets/CamilaPhoto.png"
-                  alt="Camila Cavaleri - Psicóloga especialista em Terapia Breve"
+                  src="/assets/CamilaPhoto.webp"
+                  alt="Camila Cavaleri - Psicóloga clínica e avaliadora psicológica"
                   className={styles.photo}
                   decoding="async"
                   loading="lazy"

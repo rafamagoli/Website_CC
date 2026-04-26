@@ -7,7 +7,6 @@ const NAV_LINKS = [
   { href: '/',        label: 'Início',   exact: true },
   { href: '/sobre',   label: 'Sobre' },
   { href: '/servicos', label: 'Serviços' },
-  { href: '/contato', label: 'Contato' },
 ]
 
 export default function Navbar() {
@@ -42,8 +41,10 @@ export default function Navbar() {
   const isActive = (item) =>
     item.exact ? pathname === item.href : pathname === item.href || pathname.startsWith(item.href + '/')
 
+  const isLight = pathname === '/contato' && !scrolled
+
   return (
-    <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''} ${isLight ? styles.navLight : ''}`}>
       <nav className={styles.inner}>
         <Link to="/" className={styles.brand} aria-label="Página inicial">
           <span className={styles.brandText}>Camila Cavaleri</span>

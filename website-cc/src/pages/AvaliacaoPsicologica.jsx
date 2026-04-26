@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from '../styles/AvaliacaoPsicologica.module.css'
+import IconGreen from '../assets/ICONGREEN.png'
 
 const SCHEMA = {
   '@context': 'https://schema.org',
@@ -23,20 +24,24 @@ const SCHEMA = {
 
 const processItems = [
   {
+    index: '01',
     title: 'Testes psicológicos validados',
-    desc: 'Instrumentos padronizados e reconhecidos pela literatura científica.',
+    desc: 'Instrumentos padronizados e reconhecidos pela literatura científica, aplicados conforme protocolo.',
   },
   {
+    index: '02',
     title: 'Ferramentas de rastreio',
-    desc: 'Estruturas que auxiliam no levantamento de hipóteses clínicas.',
+    desc: 'Estruturas que auxiliam no levantamento e refinamento de hipóteses clínicas ao longo do processo.',
   },
   {
+    index: '03',
     title: 'Entrevistas clínicas estruturadas',
-    desc: 'Conversas conduzidas com critério e direção.',
+    desc: 'Conversas conduzidas com critério, direção e escuta ativa para mapear o histórico da pessoa.',
   },
   {
+    index: '04',
     title: 'Assessments com informantes',
-    desc: 'Quando necessário, ouvir pessoas próximas contribui para um olhar mais completo.',
+    desc: 'Quando indicado, ouvir pessoas próximas contribui para um olhar mais completo do histórico.',
   },
 ]
 
@@ -76,7 +81,7 @@ export default function AvaliacaoPsicologica() {
 
   return (
     <>
-      {/* ─── HERO split layout ────────────────────────────────── */}
+      {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.avalHeroGrid}>
           <div className={styles.heroLeft}>
@@ -92,13 +97,12 @@ export default function AvaliacaoPsicologica() {
             </h1>
 
             <p className={styles.heroLead}>
-              Uma investigação clínica rigorosa, conduzida com qualidade e critério,
-              para quem quer se entender melhor ou confirmar uma hipótese diagnóstica.
+              Processo avaliativo conduzido com rigor clínico, instrumentos validados e fundamentação nos critérios diagnósticos do DSM-5. Atendimento presencial e online em Vitória, ES.
             </p>
 
             <div className={styles.heroCtas}>
               <a href="/contato" className={styles.ctaPrimary}>
-                Entrar em contato
+                Fale comigo
               </a>
               <a href="/contato" className={styles.ctaSecondary}>
                 Indicado por médico? Fale comigo
@@ -107,27 +111,48 @@ export default function AvaliacaoPsicologica() {
           </div>
 
           <div className={styles.heroRight}>
-            <div className={styles.avalSideCard}>
-              <p className={styles.avalSideCardTitle}>
-                Critério. Rigor.<br />Raciocínio clínico.
-              </p>
-              <div className={styles.avalSideCardAccent} aria-hidden="true" />
-              <p className={styles.avalSideCardSub}>
-                Avaliação baseada nos critérios do DSM-5
-              </p>
-            </div>
+            <img
+              src="/assets/CamilaPhoto2.webp"
+              alt="Camila Cavaleri em retrato profissional"
+              className={styles.avalHeroPhoto}
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
 
-      {/* ─── PARA QUEM É ──────────────────────────────────────── */}
+      {/* PARA PROFISSIONAIS DE SAUDE */}
+      <section className={styles.profSection}>
+        <div className={styles.container}>
+          <p className={styles.eyebrowLight}>PARA ENCAMINHADORES</p>
+          <h2 className={styles.sectionH2Light}>Para profissionais de saúde</h2>
+
+          <p className={styles.sectionBodyLight}>
+            Realizo avaliações psicológicas com critério clínico e raciocínio diagnóstico estruturado, utilizando instrumentos reconhecidos pela literatura científica e embasados nos critérios do DSM-5 e CID-11.
+          </p>
+
+          <p className={styles.sectionBodyLight}>
+            O processo inclui testes psicológicos validados, ferramentas de rastreio, entrevistas clínicas estruturadas e, quando indicado, assessments com informantes. O laudo final documenta o percurso investigativo de forma clara, fundamentada e adequada para embasar condutas terapêuticas ou psiquiátricas.
+          </p>
+
+          <p className={styles.sectionBodyLight}>
+            Encaminhamentos podem ser feitos diretamente por contato.
+          </p>
+
+          <a href="/contato" className={styles.ctaLight}>
+            Fale comigo
+          </a>
+        </div>
+      </section>
+
+      {/* PARA QUEM E */}
       <section className={styles.section}>
         <div className={styles.container}>
+          <p className={styles.eyebrow}>INDICAÇÕES</p>
           <h2 className={styles.sectionH2}>Para quem é</h2>
 
           <p className={styles.sectionIntro}>
-            Algumas pessoas chegam com dúvidas. Outras chegam com suspeitas.
-            Outras chegam encaminhadas por um psiquiatra. Todas chegam querendo respostas.
+            Pessoas que chegam à avaliação psicológica geralmente trazem uma hipótese, uma suspeita ou um encaminhamento. Em todos os casos, o objetivo é o mesmo: investigar com seriedade e chegar a respostas fundamentadas.
           </p>
 
           <ul className={styles.pills} aria-label="Principais queixas">
@@ -144,17 +169,15 @@ export default function AvaliacaoPsicologica() {
           </ul>
 
           <p className={styles.sectionBody}>
-            Muitos chegam pensando "algo não encaixa" e a avaliação é o espaço
-            para investigar isso com seriedade, sem pressa e sem rótulos apressados.
-            A avaliação não é simplesmente receber um diagnóstico. É um caminho
-            investigativo construído com você.
+            A avaliação não parte de conclusões antecipadas. É um processo investigativo que respeita a complexidade de cada caso e documenta apenas o que os critérios diagnósticos sustentam.
           </p>
         </div>
       </section>
 
-      {/* ─── O QUE ENVOLVE: grid 2x2 ─────────────────────────── */}
+      {/* O QUE ENVOLVE */}
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className={styles.container}>
+          <p className={styles.eyebrow}>METODOLOGIA</p>
           <h2 className={styles.sectionH2}>O que a avaliação envolve</h2>
 
           <p className={styles.sectionIntro}>
@@ -165,6 +188,7 @@ export default function AvaliacaoPsicologica() {
           <div className={styles.processGrid}>
             {processItems.map((item) => (
               <div key={item.title} className={styles.processCard}>
+                <img src={IconGreen} alt="" className={styles.processCardIcon} aria-hidden="true" />
                 <strong className={styles.processCardTitle}>{item.title}</strong>
                 <p className={styles.processCardDesc}>{item.desc}</p>
               </div>
@@ -178,9 +202,10 @@ export default function AvaliacaoPsicologica() {
         </div>
       </section>
 
-      {/* ─── O QUE O LAUDO TRAZ ───────────────────────────────── */}
+      {/* O QUE O LAUDO TRAZ */}
       <section className={styles.section}>
         <div className={styles.container}>
+          <p className={styles.eyebrow}>RESULTADO</p>
           <h2 className={styles.sectionH2}>O que o laudo traz</h2>
 
           <p className={styles.sectionBody}>
@@ -204,41 +229,14 @@ export default function AvaliacaoPsicologica() {
         </div>
       </section>
 
-      {/* ─── PARA PROFISSIONAIS: full-bleed verde escuro ────────── */}
-      <section className={styles.profSection}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionH2Light}>Para profissionais de saúde</h2>
-
-          <p className={styles.sectionBodyLight}>
-            Realizo avaliações psicológicas com critério, rigor clínico e
-            raciocínio diagnóstico embasado nos critérios do DSM-5.
-          </p>
-
-          <p className={styles.sectionBodyLight}>
-            Cada avaliação é conduzida com instrumentos reconhecidos, entrevistas
-            estruturadas e, quando indicado, assessments com informantes. O laudo
-            final documenta o processo investigativo de forma clara e fundamentada,
-            servindo como base para condutas terapêuticas ou psiquiátricas.
-          </p>
-
-          <p className={styles.sectionBodyLight}>
-            Encaminhamentos podem ser feitos diretamente por contato.
-          </p>
-
-          <a href="/contato" className={styles.ctaLight}>
-            Encaminhar paciente
-          </a>
-        </div>
-      </section>
-
-      {/* ─── CTA FINAL ────────────────────────────────────────── */}
+      {/* CTA FINAL */}
       <section className={styles.ctaSection}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
-            <h2 className={styles.ctaTitle}>Tem dúvidas sobre o processo?</h2>
+            <p className={styles.eyebrowCta}>PRÓXIMO PASSO</p>
+            <h2 className={styles.ctaTitle}>Pronto para encaminhar ou iniciar uma avaliação?</h2>
             <p className={styles.ctaDesc}>
-              Antes de qualquer compromisso, podemos conversar sobre o que faz
-              sentido para o seu caso.
+              Entre em contato para entender como o processo funciona para o seu caso específico.
             </p>
             <a href="/contato" className={styles.ctaPrimary}>
               Agendar uma conversa

@@ -8,7 +8,13 @@ export default defineConfig({
   },
   server: {
     warmup: {
-      clientFiles: ['./src/App.jsx', './src/sections/home/Home.jsx'],
+      clientFiles: [
+        './src/App.jsx',
+        './src/sections/home/Home.jsx',
+        './src/pages/PsicologiaBreve.jsx',
+        './src/pages/AvaliacaoPsicologica.jsx',
+        './src/sections/services/Services.jsx',
+      ],
     },
   },
 })

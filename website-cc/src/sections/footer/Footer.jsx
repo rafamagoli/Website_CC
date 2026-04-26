@@ -9,18 +9,18 @@ export default function Footer() {
         {/* CTA */}
         <div className={styles.cta}>
           <h2 className={styles.ctaTitle}>
-            Pronta para começar sua jornada de autoconhecimento?
+            Psicologia Clínica e Avaliação Psicológica.
           </h2>
           <p className={styles.ctaText}>
-            Marque sua primeira conversa e descubra, no seu tempo, um caminho com mais clareza e leveza.
+            Atendimento individual com Psicologia Breve e realização de avaliações psicológicas para diagnóstico de TDAH, autismo e questões do neurodesenvolvimento.
           </p>
           <a
-            href="https://wa.me/5527988302361?text=Olá%20Camila,%20gostaria%20de%20agendar%20uma%20sessão."
+            href="https://wa.me/5527988302361?text=Olá%20Camila,%20gostaria%20de%20agendar%20uma%20conversa."
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaButton}
           >
-            Agendar no WhatsApp
+            Agendar conversa
           </a>
         </div>
 
@@ -40,7 +40,7 @@ export default function Footer() {
               </span>
             </div>
             <div>
-              <p className={styles.brandMeta}>Psicologia Breve • CRP 16/11890</p>
+              <p className={styles.brandMeta}>Psicologia Clínica e Avaliação Psicológica • CRP 16/11890</p>
             </div>
           </div>
 
@@ -72,11 +72,11 @@ export default function Footer() {
           <div className={styles.section}>
             <h4 className={styles.sectionTitle}>Navegação</h4>
             <div className={styles.nav}>
-              <a href="#home">Início</a>
-              <a href="#about">Sobre</a>
-              <a href="#services">Terapia Breve</a>
-              <a href="#faq">FAQ</a>
-              <a href="#contact">Contato</a>
+              <a href="/">Início</a>
+              <a href="/sobre">Sobre</a>
+              <a href="/servicos">Serviços</a>
+              <a href="/servicos/psicologia-breve">Psicologia Breve</a>
+              <a href="/servicos/avaliacao-psicologica">Avaliação Psicológica</a>
             </div>
           </div>
         </div>

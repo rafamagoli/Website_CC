@@ -5,10 +5,10 @@ export default function Services() {
   const sectionRef = useRef(null)
   
   const gallery = [
-    { src: '/assets/Service1.png', alt: 'Acolhimento e leveza' },
-    { src: '/assets/Service2.png', alt: 'Portas para novos caminhos' },
-    { src: '/assets/Service3.png', alt: 'Texturas suaves e cuidado' },
-    { src: '/assets/Service4.png', alt: 'Simplicidade e presença' },
+    { src: '/assets/Service1.webp', alt: 'Acolhimento e leveza' },
+    { src: '/assets/Service2.webp', alt: 'Portas para novos caminhos' },
+    { src: '/assets/Service3.webp', alt: 'Texturas suaves e cuidado' },
+    { src: '/assets/Service4.webp', alt: 'Simplicidade e presença' },
   ]
 
   useEffect(() => {
