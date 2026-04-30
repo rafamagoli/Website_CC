@@ -216,43 +216,24 @@
 }
 
 .kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 50px;
-  font-size: 12px;
-  font-weight: 600;
-  background: 
-    linear-gradient(135deg, rgba(83,104,69,0.08) 0%, rgba(83,104,69,0.12) 100%);
-  color: var(--color-primary-1);
-  border: 1px solid rgba(83,104,69,0.15);
+  display: block;
   font-family: var(--font-secondary);
-  margin-bottom: 12px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.kicker::before {
-  content: '👋';
-  font-size: 10px;
-}
-
-.kicker:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(83,104,69,0.15);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary-1);
+  margin: 0 0 20px;
 }
 
 .title {
   font-family: var(--font-primary);
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 400;
   margin: 0 0 20px;
-  color: var(--fg);
-  background: linear-gradient(135deg, var(--fg) 0%, var(--color-primary-1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.2;
+  color: var(--color-primary-1);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
 }
 
 .lead {
@@ -344,6 +325,55 @@
   font-family: var(--font-secondary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+/* CTA BUTTONS */
+.aboutCtas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.aboutCtaPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--color-primary-2) 0%, #f4b942 100%);
+  color: #0a0b0c;
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(241, 174, 47, 0.28);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.aboutCtaPrimary:hover {
+  box-shadow: 0 8px 24px rgba(241, 174, 47, 0.4);
+  transform: translateY(-2px);
+}
+
+.aboutCtaGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 1px solid rgba(83, 104, 69, 0.3);
+  color: var(--color-primary-1);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.aboutCtaGhost:hover {
+  border-color: rgba(83, 104, 69, 0.6);
+  background: rgba(83, 104, 69, 0.05);
 }
 
 /* RESPONSIVE */

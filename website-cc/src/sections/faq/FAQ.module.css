@@ -437,6 +437,34 @@
   transform: translateX(2px);
 }
 
+.ctaButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.ctaButtonGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(83, 104, 69, 0.3);
+  color: var(--color-primary-1);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  flex-shrink: 0;
+}
+
+.ctaButtonGhost:hover {
+  border-color: rgba(83, 104, 69, 0.6);
+  background: rgba(83, 104, 69, 0.05);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .faq {
@@ -542,8 +570,18 @@
   }
   
   .ctaButton {
-    align-self: stretch;
     justify-content: center;
+    flex: 1;
+  }
+
+  .ctaButtonGhost {
+    justify-content: center;
+    flex: 1;
+  }
+
+  .ctaButtons {
+    justify-content: center;
+    width: 100%;
   }
   
   .floatingIcon {

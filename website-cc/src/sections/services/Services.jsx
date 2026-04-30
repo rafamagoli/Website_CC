@@ -177,7 +177,7 @@ export default function Services() {
         <aside className={styles.ctaBanner}>
           <div className={styles.ctaText}>
             <h3 className={styles.ctaTitle}>Quer saber se a Terapia Breve é para você?</h3>
-            <p className={styles.ctaSubtitle}>Te convido para uma primeira conversa acolhedora.</p>
+            <p className={styles.ctaSubtitle}>Entre em contato para uma primeira conversa.</p>
           </div>
           <a
             href="/contato"

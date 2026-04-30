@@ -104,9 +104,6 @@ export default function AvaliacaoPsicologica() {
               <a href="/contato" className={styles.ctaPrimary}>
                 Fale comigo
               </a>
-              <a href="/contato" className={styles.ctaSecondary}>
-                Indicado por médico? Fale comigo
-              </a>
             </div>
           </div>
 

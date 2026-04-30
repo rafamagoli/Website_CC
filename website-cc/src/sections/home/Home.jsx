@@ -31,6 +31,8 @@ export default function Home() {
           icon.className = styles.floatingIcon
           icon.style.left = `${e.clientX - 8}px`
           icon.style.top = `${e.clientY - 8}px`
+          icon.style.width = '16px'
+          icon.style.height = '16px'
           section.appendChild(icon)
           icon.addEventListener('animationend', () => icon.remove())
         }
@@ -47,88 +49,85 @@ export default function Home() {
   return (
     <section
       id="home"
-      className={`section section--hero ${styles.hero}`}
+      className={styles.hero}
       ref={sectionRef}
     >
-      <div className={`container ${styles.heroTop}`}>
+      <div className={styles.heroGrid}>
 
-        {/* Logo */}
+        {/* COLUNA ESQUERDA */}
         <motion.div
-          className={styles.logoRow}
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
+          className={styles.heroLeft}
+          initial={{ opacity: 0, x: -24 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <span className={styles.logoText}>Camila</span>
-          <div className={styles.logoRight}>
-            <span className={styles.logoText}>Cavaleri</span>
-            <motion.img
-              src="/assets/ICONRED.png"
-              alt=""
-              className={styles.icon}
-              animate={{ rotate: [0, 10, -10, 0], scale: [1, 1.1, 1] }}
-              transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' }}
-            />
+          {/* Nome */}
+          <div className={styles.nameBlock}>
+            <span className={styles.logoText}>Camila</span>
+            <div className={styles.logoRight}>
+              <span className={styles.logoText}>Cavaleri</span>
+              <motion.img
+                src="/assets/ICONRED.png"
+                alt=""
+                className={styles.icon}
+                animate={{ rotate: [0, 10, -10, 0], scale: [1, 1.1, 1] }}
+                transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' }}
+              />
+            </div>
+          </div>
+
+          {/* Badge */}
+          <p className={styles.heroEyebrow}>
+            Atendimento online e presencial em Vitória, ES
+          </p>
+
+          {/* Divisor âmbar */}
+          <div className={styles.accentLine} />
+
+          {/* Headline */}
+          <h1 className={styles.heroTitle}>
+            Psicóloga clínica e avaliadora psicológica
+          </h1>
+
+          {/* Subtítulo */}
+          <p className={styles.heroSubtitle}>
+            Um espaço seguro para lidar com o que hoje te incomoda e entender quem você realmente é.
+          </p>
+
+          {/* CTAs */}
+          <div className={styles.ctaGroup}>
+            <motion.a
+              href="/contato"
+              className={styles.ctaButton}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Agende sua primeira conversa
+              <svg className={styles.ctaIcon} viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </motion.a>
+            <a href="/servicos" className={styles.ctaButtonGhost}>
+              Conhecer os serviços
+            </a>
           </div>
         </motion.div>
 
-        {/* Eyebrow badge */}
-        <motion.p
-          className={styles.heroEyebrow}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
-        >
-          ATENDIMENTO ONLINE E PRESENCIAL EM VITÓRIA - ES
-        </motion.p>
-
-        {/* Headline */}
-        <motion.h1
-          className={styles.heroTitle}
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.45 }}
-        >
-          Psicóloga clínica e avaliadora psicológica
-        </motion.h1>
-
-        {/* Subtitle */}
-        <motion.p
-          className={styles.heroSubtitle}
-          initial={{ y: 16, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.6 }}
-        >
-          Um espaço seguro para lidar com o que hoje te incomoda e entender quem você realmente é.
-        </motion.p>
-
-        {/* CTA */}
+        {/* COLUNA DIREITA — foto */}
         <motion.div
-          className={styles.ctaGroup}
-          initial={{ y: 16, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.75 }}
+          className={styles.heroRight}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
         >
-          <motion.a
-            href="/contato"
-            className={styles.ctaButton}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            Agende sua primeira conversa
-            <svg className={styles.ctaIcon} viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </motion.a>
-          <a href="/servicos" className={styles.ctaButtonGhost}>
-            Conhecer os serviços
-          </a>
+          <img
+            src="/assets/CamilaPhoto2.webp"
+            alt="Camila Cavaleri, psicóloga clínica e avaliadora psicológica"
+            className={styles.heroPhoto}
+            loading="eager"
+            fetchPriority="high"
+          />
         </motion.div>
-
 
       </div>
     </section>

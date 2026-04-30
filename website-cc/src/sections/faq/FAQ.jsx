@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import styles from './FAQ.module.css'
 
@@ -22,7 +23,7 @@ const questions = [
     icon: '/assets/ICONRED.png',
     category: 'Logística',
     q: 'Qual a frequência dos atendimentos?',
-    a: 'Na maioria dos casos, semanal. Em algumas fases pode ser quinzenal, de acordo com objetivos e disponibilidade. Decidimos juntas(o) o que faz mais sentido.'
+    a: 'Na maioria dos casos, semanal. Em algumas fases pode ser quinzenal, de acordo com objetivos e disponibilidade. Decidimos juntos o que faz mais sentido.'
   },
   {
     id: 4,
@@ -78,7 +79,35 @@ const questions = [
     icon: '/assets/ICONYELLOW.png',
     category: 'Agendamento',
     q: 'Como agendar?',
-    a: 'Clique em "Agende sua primeira conversa" e me envie uma mensagem. Vou te retornar com as próximas disponibilidades e os passos simples para começarmos.'
+    a: 'Clique em "Agendar conversa" e me envie uma mensagem. Vou te retornar com as próximas disponibilidades e os passos simples para começarmos.'
+  },
+  {
+    id: 12,
+    icon: '/assets/ICONGREEN.png',
+    category: 'Avaliação',
+    q: 'O que é a avaliação psicológica?',
+    a: 'É um processo investigativo conduzido com rigor clínico para responder perguntas sobre o funcionamento psicológico de uma pessoa. Envolve testes validados, entrevistas estruturadas e, quando indicado, assessments com pessoas próximas. Ao final, é elaborado um laudo criterioso com devolutiva humanizada.'
+  },
+  {
+    id: 13,
+    icon: '/assets/ICONRED.png',
+    category: 'Avaliação',
+    q: 'A avaliação resulta em diagnóstico?',
+    a: 'Pode resultar, sim, quando todos os critérios diagnósticos estabelecidos pelo DSM-5 são investigados e documentados com rigor. Um laudo bem feito não é um rótulo, é um documento que ajuda a pessoa a se entender dentro de uma perspectiva clínica.'
+  },
+  {
+    id: 14,
+    icon: '/assets/ICONYELLOW.png',
+    category: 'Avaliação',
+    q: 'Quanto tempo dura o processo de avaliação?',
+    a: 'A duração é definida pela complexidade do caso e pelas perguntas que precisam ser respondidas. Não há um tempo fixo: o processo é conduzido com o cuidado que cada situação exige.'
+  },
+  {
+    id: 15,
+    icon: '/assets/ICONGREEN.png',
+    category: 'Avaliação',
+    q: 'Quem pode solicitar uma avaliação psicológica?',
+    a: 'Qualquer pessoa que queira entender melhor seu funcionamento psicológico, confirmar uma hipótese diagnóstica ou que chegou com encaminhamento de psiquiatra ou outro profissional de saúde. A avaliação é indicada para suspeitas de TDAH, autismo, burnout e outras questões do neurodesenvolvimento.'
   }
 ]
 
@@ -241,7 +270,7 @@ export default function FAQ() {
               variants={itemVariants}
             >
               Respostas claras e diretas sobre a Psicologia Breve e como podemos 
-              trabalhar juntas(os) no seu processo de transformação
+              trabalhar juntos no seu processo de transformação
             </motion.p>
           </motion.header>
 
@@ -368,22 +397,25 @@ export default function FAQ() {
                   Ainda tem dúvidas?
                 </h3>
                 <p className={styles.ctaDescription}>
-                  Vamos conversar! Estou aqui para esclarecer qualquer questão 
-                  e te ajudar a dar o primeiro passo.
+                  Estou aqui para esclarecer qualquer questão e ajudar a dar o primeiro passo.
                 </p>
+                <div className={styles.ctaButtons}>
+                  <motion.a
+                    href="/contato"
+                    className={styles.ctaButton}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Fale comigo
+                    <svg className={styles.ctaArrow} viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </motion.a>
+                  <Link to="/servicos" className={styles.ctaButtonGhost}>
+                    Ver serviços
+                  </Link>
+                </div>
               </div>
-              
-              <motion.a 
-                href="#contact"
-                className={styles.ctaButton}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Fale comigo
-                <svg className={styles.ctaArrow} viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </motion.a>
             </motion.div>
           </motion.div>
         </motion.div>

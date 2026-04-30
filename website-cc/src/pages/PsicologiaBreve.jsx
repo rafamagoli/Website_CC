@@ -33,7 +33,7 @@ export default function PsicologiaBreve() {
 
           <div className={styles.heroRight}>
             <img
-              src="/assets/CamilaPhoto3.png"
+              src="/assets/CamilaPhoto3.webp"
               alt="Camila Cavaleri em atendimento"
               className={styles.avalHeroPhoto}
               loading="lazy"

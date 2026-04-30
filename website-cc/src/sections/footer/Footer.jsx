@@ -9,10 +9,10 @@ export default function Footer() {
         {/* CTA */}
         <div className={styles.cta}>
           <h2 className={styles.ctaTitle}>
-            Psicologia Clínica e Avaliação Psicológica.
+            Vamos dar o próximo passo?
           </h2>
           <p className={styles.ctaText}>
-            Atendimento individual com Psicologia Breve e realização de avaliações psicológicas para diagnóstico de TDAH, autismo e questões do neurodesenvolvimento.
+            Seja para iniciar um acompanhamento clínico ou uma avaliação psicológica, estou à disposição.
           </p>
           <a
             href="https://wa.me/5527988302361?text=Olá%20Camila,%20gostaria%20de%20agendar%20uma%20conversa."

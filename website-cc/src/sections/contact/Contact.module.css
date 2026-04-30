@@ -193,7 +193,7 @@
   .decorIcon {
     width: 56px;
     height: 56px;
-    top: 28px;
+    top: calc(64px + 20px);
     right: 28px;
   }
 
