@@ -34,7 +34,7 @@ export default function Contact() {
       <div className={styles.right}>
         <div className={styles.links}>
           <a
-            href="https://wa.me/5527988302361?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20em%20contato."
+            href="https://wa.me/5527988302361?text=Ol%C3%A1%2C%20Camila!%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20e%20como%20funciona%20o%20primeiro%20contato."
             target="_blank"
             rel="noopener noreferrer"
             className={styles.contactRow}
