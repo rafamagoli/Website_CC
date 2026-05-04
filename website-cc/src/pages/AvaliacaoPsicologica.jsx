@@ -118,30 +118,6 @@ export default function AvaliacaoPsicologica() {
         </div>
       </section>
 
-      {/* PARA PROFISSIONAIS DE SAUDE */}
-      <section className={styles.profSection}>
-        <div className={styles.container}>
-          <p className={styles.eyebrowLight}>PARA ENCAMINHADORES</p>
-          <h2 className={styles.sectionH2Light}>Para profissionais de saúde</h2>
-
-          <p className={styles.sectionBodyLight}>
-            Realizo avaliações psicológicas com critério clínico e raciocínio diagnóstico estruturado, utilizando instrumentos reconhecidos pela literatura científica e embasados nos critérios do DSM-5 e CID-11.
-          </p>
-
-          <p className={styles.sectionBodyLight}>
-            O processo inclui testes psicológicos validados, ferramentas de rastreio, entrevistas clínicas estruturadas e, quando indicado, assessments com informantes. O laudo final documenta o percurso investigativo de forma clara, fundamentada e adequada para embasar condutas terapêuticas ou psiquiátricas.
-          </p>
-
-          <p className={styles.sectionBodyLight}>
-            Encaminhamentos podem ser feitos diretamente por contato.
-          </p>
-
-          <Link to="/contato" className={styles.ctaLight}>
-            Fale comigo
-          </Link>
-        </div>
-      </section>
-
       {/* PARA QUEM E */}
       <section className={styles.section}>
         <div className={styles.container}>
@@ -168,6 +144,30 @@ export default function AvaliacaoPsicologica() {
           <p className={styles.sectionBody}>
             A avaliação não parte de conclusões antecipadas. É um processo investigativo que respeita a complexidade de cada caso e documenta apenas o que os critérios diagnósticos sustentam.
           </p>
+        </div>
+      </section>
+
+      {/* PARA PROFISSIONAIS DE SAUDE */}
+      <section className={styles.profSection}>
+        <div className={styles.container}>
+          <p className={styles.eyebrowLight}>PARA ENCAMINHADORES</p>
+          <h2 className={styles.sectionH2Light}>Para profissionais de saúde</h2>
+
+          <p className={styles.sectionBodyLight}>
+            Realizo avaliações psicológicas com critério clínico e raciocínio diagnóstico estruturado, utilizando instrumentos reconhecidos pela literatura científica e embasados nos critérios do DSM-5 e CID-11.
+          </p>
+
+          <p className={styles.sectionBodyLight}>
+            O processo inclui testes psicológicos validados, ferramentas de rastreio, entrevistas clínicas estruturadas e, quando indicado, assessments com informantes. O laudo final documenta o percurso investigativo de forma clara, fundamentada e adequada para embasar condutas terapêuticas ou psiquiátricas.
+          </p>
+
+          <p className={styles.sectionBodyLight}>
+            Encaminhamentos podem ser feitos diretamente por contato.
+          </p>
+
+          <Link to="/contato" className={styles.ctaLight}>
+            Fale comigo
+          </Link>
         </div>
       </section>
 
