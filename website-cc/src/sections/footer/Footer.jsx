@@ -69,10 +69,11 @@ export default function Footer() {
             <h4 className={styles.sectionTitle}>Navegação</h4>
             <div className={styles.nav}>
               <Link to="/">Início</Link>
-              <Link to="/sobre">Sobre</Link>
+              <Link to="/sobre">FAQ</Link>
               <Link to="/servicos">Serviços</Link>
               <Link to="/servicos/psicologia-breve">Psicologia Breve</Link>
               <Link to="/servicos/avaliacao-psicologica">Avaliação Psicológica</Link>
+              <Link to="/contato">Contato</Link>
             </div>
           </div>
         </div>
@@ -82,7 +83,7 @@ export default function Footer() {
           <p>© {year} Camila Cavaleri. Todos os direitos reservados.</p>
           <p>
             Site feito por{' '}
-            <a href="https://www.instagram.com/lyradigitalstudio" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.lyradigitalstudio.com" target="_blank" rel="noopener noreferrer">
               Lyra • Digital Studio
             </a>
           </p>

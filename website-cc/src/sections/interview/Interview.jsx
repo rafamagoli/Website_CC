@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import styles from './Interview.module.css'
 
@@ -100,9 +101,9 @@ export default function Interview() {
           <p className={styles.calloutText}>
             Pedir ajuda é um gesto de <em>coragem.</em>
           </p>
-          <a href="#contact" className={styles.calloutButton}>
+          <Link to="/contato" className={styles.calloutButton}>
             Conversar sobre isso →
-          </a>
+          </Link>
         </motion.div>
 
       </div>

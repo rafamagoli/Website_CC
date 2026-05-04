@@ -3,14 +3,14 @@ import { lazy, Suspense } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './assets/components/navbar/Navbar.jsx'
 import Home from './sections/home/Home.jsx'
+import About from './sections/about/About.jsx'
+import Sobre from './pages/Sobre.jsx'
 import Footer from './sections/footer/Footer.jsx'
 import ScrollToTop from './utils/ScrollToTop.jsx'
 import './index.css'
 import './App.css'
 
 const Interview = lazy(() => import('./sections/interview/Interview.jsx'))
-const FAQ = lazy(() => import('./sections/faq/FAQ.jsx'))
-const Sobre = lazy(() => import('./pages/Sobre.jsx'))
 const Servicos = lazy(() => import('./pages/Servicos.jsx'))
 const PsicologiaBreve = lazy(() => import('./pages/PsicologiaBreve.jsx'))
 const AvaliacaoPsicologica = lazy(() => import('./pages/AvaliacaoPsicologica.jsx'))
@@ -20,8 +20,8 @@ function HomePage() {
   return (
     <Suspense fallback={null}>
       <Home />
+      <About />
       <Interview />
-      <FAQ />
     </Suspense>
   )
 }

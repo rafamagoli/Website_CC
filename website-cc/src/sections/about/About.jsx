@@ -83,7 +83,7 @@ export default function About() {
             </h2>
             
             <p className={styles.lead}>
-              Sou psicóloga clínica e avaliadora psicológica. Atuo no
+              Sou psicóloga clínica e realizo avaliações psicológicas. Atuo no
               atendimento individual com <strong>Psicologia Breve</strong> e
               na realização de <strong>avaliações psicológicas</strong> para
               questões do neurodesenvolvimento.

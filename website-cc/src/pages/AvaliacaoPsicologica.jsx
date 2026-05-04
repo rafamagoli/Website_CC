@@ -101,9 +101,9 @@ export default function AvaliacaoPsicologica() {
             </p>
 
             <div className={styles.heroCtas}>
-              <a href="/contato" className={styles.ctaPrimary}>
+              <Link to="/contato" className={styles.ctaPrimary}>
                 Fale comigo
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -136,9 +136,9 @@ export default function AvaliacaoPsicologica() {
             Encaminhamentos podem ser feitos diretamente por contato.
           </p>
 
-          <a href="/contato" className={styles.ctaLight}>
+          <Link to="/contato" className={styles.ctaLight}>
             Fale comigo
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -193,8 +193,8 @@ export default function AvaliacaoPsicologica() {
           </div>
 
           <p className={styles.sectionBodySpaced}>
-            O processo não tem um tempo fixo. A duração é definida pela
-            complexidade do caso e pelas perguntas que precisam ser respondidas.
+            A avaliação psicológica acontece ao longo de 8 sessões, organizadas
+            para investigar com profundidade as perguntas clínicas de cada caso.
           </p>
         </div>
       </section>
@@ -235,9 +235,9 @@ export default function AvaliacaoPsicologica() {
             <p className={styles.ctaDesc}>
               Entre em contato para entender como o processo funciona para o seu caso específico.
             </p>
-            <a href="/contato" className={styles.ctaPrimary}>
+            <Link to="/contato" className={styles.ctaPrimary}>
               Agendar uma conversa
-            </a>
+            </Link>
           </div>
         </div>
       </section>

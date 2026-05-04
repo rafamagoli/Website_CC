@@ -5,7 +5,7 @@ import IconRed from '../../ICONRED.png'
 
 const NAV_LINKS = [
   { href: '/',        label: 'Início',   exact: true },
-  { href: '/sobre',   label: 'Sobre' },
+  { href: '/sobre',   label: 'FAQ' },
   { href: '/servicos', label: 'Serviços' },
 ]
 

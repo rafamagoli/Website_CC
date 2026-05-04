@@ -1,14 +1,11 @@
 /* Premium FAQ Section */
 .faq {
-  background: 
-    radial-gradient(circle at 15% 20%, rgba(83, 104, 69, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 85% 80%, rgba(241, 174, 47, 0.05) 0%, transparent 50%),
-    linear-gradient(135deg, #fafafa 0%, var(--color-secondary-3) 50%, #f8f8f8 100%);
   position: relative;
   overflow: hidden;
   min-height: 90vh;
   display: flex;
   align-items: center;
+  border-bottom: none;
 }
 
 /* Sophisticated background elements */
@@ -33,29 +30,18 @@
   top: 15%;
   left: 5%;
   filter: blur(1px);
-}
-
-/* Interactive cursor follower */
-.cursorFollower {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(83, 104, 69, 0.08) 0%,
-    rgba(241, 174, 47, 0.05) 40%,
-    transparent 70%
-  );
-  pointer-events: none;
-  z-index: 1;
-  mix-blend-mode: multiply;
+  animation: floatFaqIcon 14s ease-in-out infinite;
 }
 
 .content {
   position: relative;
   z-index: 2;
   width: 100%;
+}
+
+@keyframes floatFaqIcon {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -14px, 0); }
 }
 
 /* Enhanced Header */
@@ -65,25 +51,15 @@
   position: relative;
 }
 
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.eyebrow {
+  display: block;
   font-family: var(--font-secondary);
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--color-primary-1);
-  background: 
-    linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
-  padding: 8px 20px;
-  border-radius: 50px;
-  border: 1px solid rgba(83, 104, 69, 0.12);
-  box-shadow: 
-    0 4px 16px rgba(0, 0, 0, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  margin-bottom: 24px;
+  margin: 0 0 20px;
 }
 
 .title {
@@ -135,17 +111,13 @@
 
 .item {
   position: relative;
-  background: 
-    linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+  background: rgba(255, 255, 255, 0.86);
   border-radius: 20px;
   margin-bottom: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 
     0 4px 20px rgba(0, 0, 0, 0.04),
-    0 1px 3px rgba(0, 0, 0, 0.02),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+    0 1px 3px rgba(0, 0, 0, 0.02);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -159,13 +131,11 @@
 }
 
 .active {
-  background: 
-    linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+  background: rgba(255, 255, 255, 0.95);
   border-color: rgba(241, 174, 47, 0.3);
   box-shadow: 
     0 12px 40px rgba(0, 0, 0, 0.1),
-    0 4px 12px rgba(241, 174, 47, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    0 4px 12px rgba(241, 174, 47, 0.1);
 }
 
 /* Enhanced Question Button */
@@ -316,6 +286,14 @@
   height: 3px;
   background: linear-gradient(90deg, var(--color-primary-2) 0%, var(--color-primary-3) 100%);
   transform-origin: left;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.item:hover .hoverLine {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 /* Premium CTA Section */
@@ -340,8 +318,6 @@
     0 8px 32px rgba(0, 0, 0, 0.08),
     0 2px 8px rgba(0, 0, 0, 0.04),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   position: relative;
   overflow: hidden;
 }
@@ -479,12 +455,6 @@
     margin-bottom: 40px;
   }
   
-  .badge {
-    font-size: 13px;
-    padding: 6px 16px;
-    margin-bottom: 16px;
-  }
-  
   .title {
     font-size: clamp(24px, 8vw, 32px);
     margin-bottom: 16px;
@@ -590,9 +560,6 @@
     opacity: 0.015;
   }
   
-  .cursorFollower {
-    display: none;
-  }
 }
 
 @media (max-width: 480px) {
@@ -705,9 +672,6 @@
     animation: none;
   }
   
-  .cursorFollower {
-    display: none;
-  }
 }
 
 /* High contrast mode */
@@ -738,8 +702,7 @@
     background: white;
   }
   
-  .backgroundElements,
-  .cursorFollower {
+  .backgroundElements {
     display: none;
   }
   

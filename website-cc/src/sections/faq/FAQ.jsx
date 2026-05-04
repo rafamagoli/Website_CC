@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import styles from './FAQ.module.css'
 
 const questions = [
@@ -100,7 +100,7 @@ const questions = [
     icon: '/assets/ICONYELLOW.png',
     category: 'Avaliação',
     q: 'Quanto tempo dura o processo de avaliação?',
-    a: 'A duração é definida pela complexidade do caso e pelas perguntas que precisam ser respondidas. Não há um tempo fixo: o processo é conduzido com o cuidado que cada situação exige.'
+    a: 'O processo de avaliação psicológica acontece ao longo de 8 sessões, organizadas para investigar com profundidade as perguntas clínicas de cada caso.'
   },
   {
     id: 15,
@@ -113,48 +113,6 @@ const questions = [
 
 export default function FAQ() {
   const [active, setActive] = useState(null)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [hoveredItem, setHoveredItem] = useState(null)
-  const sectionRef = useRef(null)
-
-  useEffect(() => {
-    const section = sectionRef.current
-    if (!section) return
-
-    const handleMouseMove = (e) => {
-      const rect = section.getBoundingClientRect()
-      setMousePosition({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top
-      })
-    }
-
-    section.addEventListener('mousemove', handleMouseMove)
-    return () => section.removeEventListener('mousemove', handleMouseMove)
-  }, [])
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut'
-      }
-    }
-  }
 
   const answerVariants = {
     closed: {
@@ -178,126 +136,49 @@ export default function FAQ() {
   }
 
   return (
-    <section 
-      id="faq" 
-      className={`section ${styles.faq}`}
-      ref={sectionRef}
-    >
-      {/* Interactive background elements */}
+    <section id="faq" className={`section ${styles.faq}`}>
       <div className={styles.backgroundElements}>
-        <motion.div 
+        <div
           className={styles.floatingIcon}
-          style={{
-            backgroundImage: 'url(/assets/ICONGREEN.png)'
-          }}
-          animate={{ 
-            y: [-20, 20, -20],
-            x: [-10, 10, -10],
-            rotate: [0, 5, -5, 0]
-          }}
-          transition={{ 
-            duration: 12,
-            repeat: Infinity,
-            ease: 'easeInOut'
-          }}
+          style={{ backgroundImage: 'url(/assets/ICONGREEN.png)' }}
         />
-        <motion.div 
+        <div
           className={styles.floatingIcon}
           style={{
             backgroundImage: 'url(/assets/ICONYELLOW.png)',
             top: '60%',
             right: '5%'
           }}
-          animate={{ 
-            y: [15, -15, 15],
-            x: [5, -5, 5],
-            rotate: [0, -3, 3, 0]
-          }}
-          transition={{ 
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 2
-          }}
         />
       </div>
 
-      {/* Gradient cursor follower */}
-      <motion.div
-        className={styles.cursorFollower}
-        animate={{
-          x: mousePosition.x - 40,
-          y: mousePosition.y - 40,
-        }}
-        transition={{
-          type: 'spring',
-          stiffness: 400,
-          damping: 28,
-        }}
-      />
-
       <div className="container">
-        <motion.div
-          className={styles.content}
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {/* Enhanced Header */}
-          <motion.header 
-            className={styles.header}
-            variants={itemVariants}
-          >
-            <motion.div 
-              className={styles.badge}
-              initial={{ scale: 0, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              ❓ FAQ
-            </motion.div>
+        <div className={styles.content}>
+          <header className={styles.header}>
+            <p className={styles.eyebrow}>
+              FAQ
+            </p>
             
-            <motion.h2 
-              className={styles.title}
-              variants={itemVariants}
-            >
+            <h2 className={styles.title}>
               Perguntas <span className={styles.titleAccent}>Frequentes</span>
-            </motion.h2>
+            </h2>
             
-            <motion.p 
-              className={styles.subtitle}
-              variants={itemVariants}
-            >
-              Respostas claras e diretas sobre a Psicologia Breve e como podemos 
+            <p className={styles.subtitle}>
+              Respostas claras e diretas sobre a Psicologia Breve e a Avaliação Psicológica: como podemos 
               trabalhar juntos no seu processo de transformação
-            </motion.p>
-          </motion.header>
+            </p>
+          </header>
 
-          {/* Enhanced FAQ List */}
-          <motion.div 
-            className={styles.faqContainer}
-            variants={itemVariants}
-          >
+          <div className={styles.faqContainer}>
             {questions.map((item, idx) => (
-              <motion.div
+              <div
                 key={item.id}
                 className={`${styles.item} ${active === idx ? styles.active : ''}`}
-                variants={itemVariants}
-                onHoverStart={() => setHoveredItem(idx)}
-                onHoverEnd={() => setHoveredItem(null)}
-                whileHover={{ 
-                  scale: 1.02,
-                  transition: { duration: 0.2 }
-                }}
               >
-                {/* Question Button */}
-                <motion.button
+                <button
                   className={styles.question}
                   onClick={() => setActive(active === idx ? null : idx)}
-                  whileTap={{ scale: 0.98 }}
                 >
-                  {/* Category Tag */}
                   <div className={styles.categoryTag}>
                     <img 
                       src={item.icon} 
@@ -317,7 +198,7 @@ export default function FAQ() {
                     className={styles.toggleButton}
                     animate={{ 
                       rotate: active === idx ? 45 : 0,
-                      scale: hoveredItem === idx ? 1.1 : 1
+                      scale: 1
                     }}
                     transition={{ duration: 0.3, ease: 'easeOut' }}
                   >
@@ -326,9 +207,8 @@ export default function FAQ() {
                       <div className={styles.iconLine} />
                     </div>
                   </motion.div>
-                </motion.button>
+                </button>
 
-                {/* Animated Answer */}
                 <AnimatePresence>
                   {active === idx && (
                     <motion.div
@@ -338,7 +218,7 @@ export default function FAQ() {
                       exit="closed"
                       variants={answerVariants}
                     >
-                      <motion.div 
+                      <motion.div
                         className={styles.answerContent}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -351,27 +231,13 @@ export default function FAQ() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-
-                {/* Hover indicator line */}
-                <motion.div 
-                  className={styles.hoverLine}
-                  initial={{ scaleX: 0 }}
-                  animate={{ 
-                    scaleX: hoveredItem === idx ? 1 : 0,
-                    opacity: hoveredItem === idx ? 1 : 0
-                  }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.div>
+                <div className={styles.hoverLine} />
+              </div>
             ))}
-          </motion.div>
+          </div>
 
-          {/* Call-to-Action */}
-          <motion.div 
-            className={styles.ctaSection}
-            variants={itemVariants}
-          >
-            <motion.div 
+          <div className={styles.ctaSection}>
+            <motion.div
               className={styles.ctaCard}
               whileHover={{ scale: 1.02, y: -4 }}
               transition={{ duration: 0.3 }}
@@ -417,8 +283,8 @@ export default function FAQ() {
                 </div>
               </div>
             </motion.div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   )

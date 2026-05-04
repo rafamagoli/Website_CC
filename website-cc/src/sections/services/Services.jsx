@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Services.module.css'
 
 export default function Services() {
@@ -179,13 +180,13 @@ export default function Services() {
             <h3 className={styles.ctaTitle}>Quer saber se a Terapia Breve é para você?</h3>
             <p className={styles.ctaSubtitle}>Entre em contato para uma primeira conversa.</p>
           </div>
-          <a
-            href="/contato"
+          <Link
+            to="/contato"
             className="btn"
             aria-label="Agendar sessão de terapia breve"
           >
             Agende sua sessão
-          </a>
+          </Link>
         </aside>
       </div>
     </section>

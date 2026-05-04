@@ -25,9 +25,9 @@ export default function PsicologiaBreve() {
             </p>
 
             <div className={styles.heroCtas}>
-              <a href="/contato" className={styles.ctaPrimary}>
+              <Link to="/contato" className={styles.ctaPrimary}>
                 Agende sua sessão
-              </a>
+              </Link>
             </div>
           </div>
 
