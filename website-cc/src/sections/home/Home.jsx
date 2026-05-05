@@ -87,7 +87,7 @@ export default function Home() {
 
           {/* Headline */}
           <h1 className={styles.heroTitle}>
-            Psicóloga clínica e avaliadora psicológica
+            Psicóloga clínica e Avaliação psicológica
           </h1>
 
           {/* Subtítulo */}
