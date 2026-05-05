@@ -123,7 +123,7 @@ export default function Home() {
         >
           <img
             src="/assets/CamilaPhoto2.webp"
-            alt="Camila Cavaleri, psicóloga clínica e avaliadora psicológica"
+            alt="Camila Cavaleri, psicóloga clínica e Avaliação psicológica"
             className={styles.heroPhoto}
             loading="eager"
             fetchPriority="high"
