@@ -87,7 +87,7 @@ export default function Home() {
 
           {/* Headline */}
           <h1 className={styles.heroTitle}>
-            Psicóloga clínica e Avaliação psicológica
+            Psicóloga clínica e Avaliação neuropsicológica
           </h1>
 
           {/* Subtítulo */}
@@ -123,7 +123,7 @@ export default function Home() {
         >
           <img
             src="/assets/CamilaPhoto2.webp"
-            alt="Camila Cavaleri, psicóloga clínica e Avaliação psicológica"
+            alt="Camila Cavaleri, psicóloga clínica e Avaliação neuropsicológica"
             className={styles.heroPhoto}
             loading="eager"
             fetchPriority="high"

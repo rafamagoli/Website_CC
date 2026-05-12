@@ -45,8 +45,8 @@ export default function Servicos() {
           <Link to="/servicos/avaliacao-psicologica" className={`${styles.serviceCard} ${styles.serviceCardLight}`}>
             <span className={styles.cardNumber} aria-hidden="true">02</span>
             <div className={styles.cardContent}>
-              <span className={styles.cardTag}>Avaliação Psicológica</span>
-              <h2 className={styles.cardTitle}>Avaliação Psicológica</h2>
+              <span className={styles.cardTag}>Avaliação Neuropsicológica</span>
+              <h2 className={styles.cardTitle}>Avaliação Neuropsicológica</h2>
               <p className={styles.cardDesc}>
                 Um percurso investigativo rigoroso para entender questões do
                 neurodesenvolvimento, com testes validados e critérios diagnósticos.

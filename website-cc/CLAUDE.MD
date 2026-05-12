@@ -100,7 +100,7 @@ Para:
 - Botão ghost: trocar `href="#services"` para `href="/servicos"` e texto "Conhecer os serviços"
 
 ### 3.5 Seção "Sobre"
-Tornar a descrição abrangente: cobrir tanto a atuação clínica quanto a avaliação psicológica. Não é necessário detalhar serviços nessa seção, apenas apresentar que Camila atua nas duas frentes. Já existente mas agora precisa abranger também a avaliação clínica e retirar o foco APENAS da psicologia breve.
+Tornar a descrição abrangente: cobrir tanto a atuação clínica quanto a avaliação neuropsicológica. Não é necessário detalhar serviços nessa seção, apenas apresentar que Camila atua nas duas frentes. Já existente mas agora precisa abranger também a avaliação clínica e retirar o foco APENAS da psicologia breve.
 
 ---
 
@@ -160,9 +160,9 @@ Grid de 2 colunas em desktop, 1 coluna em mobile (abaixo de 640px).
 - Link: "Ver detalhes" aponta para `/servicos/psicologia-breve`
 - Acento visual: verde (mesma paleta primária do site)
 
-**Card 2: Avaliação Psicológica**
-- Tag: "Avaliação Psicológica"
-- Título: "Avaliação Psicológica"
+**Card 2: Avaliação Neuropsicológica**
+- Tag: "Avaliação Neuropsicológica"
+- Título: "Avaliação Neuropsicológica"
 - Descrição: "Um percurso investigativo rigoroso para entender questões do neurodesenvolvimento, com testes validados e critérios diagnósticos."
 - Link: "Ver detalhes" aponta para `/servicos/avaliacao-psicologica`
 - Acento visual: âmbar sutil (diferenciação visual do card verde)
@@ -197,25 +197,25 @@ Grid de 2 colunas em desktop, 1 coluna em mobile (abaixo de 640px).
 
 ### SEO (CRÍTICO)
 Essa página precisa aparecer no Google para buscas como:
-- "avaliação psicológica autismo Vitória ES"
+- "avaliação neuropsicológica autismo Vitória ES"
 - "laudo psicológico TDAH Vitória"
 - "avaliação neuropsicológica Espírito Santo"
 - "psicóloga avaliação burnout"
 - "laudo para autismo adulto"
-- "avaliação psicológica neurodesenvolvimento"
+- "avaliação neuropsicológica neurodesenvolvimento"
 
 **Meta tags obrigatórias (via React Helmet ou equivalente):**
 ```jsx
-<title>Avaliação Psicológica | Camila Cavaleri Psicóloga | Vitória, ES</title>
+<title>Avaliação Neuropsicológica | Camila Cavaleri Psicóloga | Vitória, ES</title>
 <meta
   name="description"
-  content="Avaliação psicológica para TDAH, autismo, burnout e questões do neurodesenvolvimento em Vitória, ES. Laudos elaborados com base nos critérios do DSM-5. Online e presencial."
+  content="Avaliação neuropsicológica para TDAH, autismo, burnout e questões do neurodesenvolvimento em Vitória, ES. Laudos elaborados com base nos critérios do DSM-5. Online e presencial."
 />
-<meta name="keywords" content="avaliação psicológica Vitória ES, laudo psicológico TDAH, avaliação autismo adulto, psicóloga avaliação neurodesenvolvimento, laudo burnout, avaliação psicológica Espírito Santo" />
+<meta name="keywords" content="avaliação neuropsicológica Vitória ES, laudo psicológico TDAH, avaliação autismo adulto, psicóloga avaliação neurodesenvolvimento, laudo burnout, avaliação neuropsicológica Espírito Santo" />
 ```
 
 **Uso semântico de headings na página:**
-- `<h1>`: "Avaliação Psicológica" (uma vez, no topo)
+- `<h1>`: "Avaliação Neuropsicológica" (uma vez, no topo)
 - `<h2>`: Títulos de cada seção (Para quem é, Como funciona, Para profissionais)
 - `<h3>`: Subtítulos dentro de seções, se necessário
 
@@ -223,8 +223,8 @@ Essa página precisa aparecer no Google para buscas como:
 
 #### 6.1 Hero da página
 ```
-[Breadcrumb: Serviços > Avaliação Psicológica]
-[H1: Avaliação Psicológica]
+[Breadcrumb: Serviços > Avaliação Neuropsicológica]
+[H1: Avaliação Neuropsicológica]
 [Lead: copy abaixo]
 [Dois botões CTA]
 ```
@@ -318,7 +318,7 @@ Adicionar na página `/servicos/avaliacao-psicologica`:
 {
   "@context": "https://schema.org",
   "@type": "PsychologicalTreatment",
-  "name": "Avaliação Psicológica",
+  "name": "Avaliação Neuropsicológica",
   "provider": {
     "@type": "Person",
     "name": "Camila Cavaleri",
@@ -330,7 +330,7 @@ Adicionar na página `/servicos/avaliacao-psicologica`:
       "addressCountry": "BR"
     }
   },
-  "description": "Avaliação psicológica para TDAH, autismo, burnout e questões do neurodesenvolvimento. Laudos com base no DSM-5."
+  "description": "Avaliação neuropsicológica para TDAH, autismo, burnout e questões do neurodesenvolvimento. Laudos com base no DSM-5."
 }
 ```
 
@@ -343,8 +343,8 @@ Adicionar na página `/servicos/avaliacao-psicologica`:
 
 ### 7.5 Open Graph (para compartilhamento nas redes)
 ```jsx
-<meta property="og:title" content="Avaliação Psicológica | Camila Cavaleri" />
-<meta property="og:description" content="Avaliação psicológica criteriosa para TDAH, autismo e neurodesenvolvimento. Vitória, ES." />
+<meta property="og:title" content="Avaliação Neuropsicológica | Camila Cavaleri" />
+<meta property="og:description" content="Avaliação neuropsicológica criteriosa para TDAH, autismo e neurodesenvolvimento. Vitória, ES." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://camilacavaleri.com/servicos/avaliacao-psicologica" />
 ```

@@ -40,7 +40,7 @@ export default function About() {
               <div className={styles.photoCircle}>
                 <img
                   src="/assets/CamilaPhoto.webp"
-                  alt="Camila Cavaleri - Psicóloga clínica e Avaliação psicológica"
+                  alt="Camila Cavaleri - Psicóloga clínica e Avaliação neuropsicológica"
                   className={styles.photo}
                   decoding="async"
                   loading="lazy"
@@ -69,7 +69,7 @@ export default function About() {
                   className={styles.credentialIcon}
                   aria-hidden="true"
                 />
-                <span>Psicologia Clínica e Avaliação Psicológica</span>
+                <span>Psicologia Clínica e Avaliação Neuropsicológica</span>
               </div>
             </div>
           </div>

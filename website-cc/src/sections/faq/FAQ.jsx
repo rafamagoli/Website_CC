@@ -85,7 +85,7 @@ const questions = [
     id: 12,
     icon: '/assets/ICONGREEN.png',
     category: 'Avaliação',
-    q: 'O que é a avaliação psicológica?',
+    q: 'O que é a avaliação neuropsicológica?',
     a: 'É um processo investigativo conduzido com rigor clínico para responder perguntas sobre o funcionamento psicológico de uma pessoa. Envolve testes validados, entrevistas estruturadas e, quando indicado, assessments com pessoas próximas. Ao final, é elaborado um laudo criterioso com devolutiva humanizada.'
   },
   {
@@ -100,13 +100,13 @@ const questions = [
     icon: '/assets/ICONYELLOW.png',
     category: 'Avaliação',
     q: 'Quanto tempo dura o processo de avaliação?',
-    a: 'O processo de avaliação psicológica acontece ao longo de 8 sessões, organizadas para investigar com profundidade as perguntas clínicas de cada caso.'
+    a: 'O processo de avaliação neuropsicológica acontece ao longo de 8 sessões, organizadas para investigar com profundidade as perguntas clínicas de cada caso.'
   },
   {
     id: 15,
     icon: '/assets/ICONGREEN.png',
     category: 'Avaliação',
-    q: 'Quem pode solicitar uma avaliação psicológica?',
+    q: 'Quem pode solicitar uma avaliação neuropsicológica?',
     a: 'Qualquer pessoa que queira entender melhor seu funcionamento psicológico, confirmar uma hipótese diagnóstica ou que chegou com encaminhamento de psiquiatra ou outro profissional de saúde. A avaliação é indicada para suspeitas de TDAH, autismo, burnout e outras questões do neurodesenvolvimento.'
   }
 ]
@@ -164,7 +164,7 @@ export default function FAQ() {
             </h2>
             
             <p className={styles.subtitle}>
-              Respostas claras e diretas sobre a Psicologia Breve e a Avaliação Psicológica: como podemos 
+              Respostas claras e diretas sobre a Psicologia Breve e a Avaliação Neuropsicológica: como podemos 
               trabalhar juntos no seu processo de transformação
             </p>
           </header>

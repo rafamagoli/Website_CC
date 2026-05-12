@@ -6,7 +6,7 @@ import IconGreen from '../assets/ICONGREEN.png'
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'PsychologicalTreatment',
-  name: 'Avaliação Psicológica',
+  name: 'Avaliação Neuropsicológica',
   provider: {
     '@type': 'Person',
     name: 'Camila Cavaleri',
@@ -19,7 +19,7 @@ const SCHEMA = {
     },
   },
   description:
-    'Avaliação psicológica para TDAH, autismo, burnout e questões do neurodesenvolvimento. Laudos com base no DSM-5.',
+    'Avaliação neuropsicológica para TDAH, autismo, burnout e questões do neurodesenvolvimento. Laudos com base no DSM-5.',
 }
 
 const processItems = [
@@ -47,7 +47,7 @@ const processItems = [
 
 export default function AvaliacaoPsicologica() {
   useEffect(() => {
-    document.title = 'Avaliação Psicológica | Camila Cavaleri Psicóloga | Vitória, ES'
+    document.title = 'Avaliação Neuropsicológica | Camila Cavaleri Psicóloga | Vitória, ES'
 
     const setMeta = (name, content, prop) => {
       const attr = prop ? 'property' : 'name'
@@ -60,10 +60,10 @@ export default function AvaliacaoPsicologica() {
       el.setAttribute('content', content)
     }
 
-    setMeta('description', 'Avaliação psicológica para TDAH, autismo, burnout e questões do neurodesenvolvimento em Vitória, ES. Laudos elaborados com base nos critérios do DSM-5. Online e presencial.')
-    setMeta('keywords', 'avaliação psicológica Vitória ES, laudo psicológico TDAH, avaliação autismo adulto, psicóloga avaliação neurodesenvolvimento, laudo burnout, avaliação psicológica Espírito Santo')
-    setMeta('og:title', 'Avaliação Psicológica | Camila Cavaleri', null, true)
-    setMeta('og:description', 'Avaliação psicológica criteriosa para TDAH, autismo e neurodesenvolvimento. Vitória, ES.', null, true)
+    setMeta('description', 'Avaliação neuropsicológica para TDAH, autismo, burnout e questões do neurodesenvolvimento em Vitória, ES. Laudos elaborados com base nos critérios do DSM-5. Online e presencial.')
+    setMeta('keywords', 'avaliação neuropsicológica Vitória ES, laudo psicológico TDAH, avaliação autismo adulto, psicóloga avaliação neurodesenvolvimento, laudo burnout, avaliação neuropsicológica Espírito Santo')
+    setMeta('og:title', 'Avaliação Neuropsicológica | Camila Cavaleri', null, true)
+    setMeta('og:description', 'Avaliação neuropsicológica criteriosa para TDAH, autismo e neurodesenvolvimento. Vitória, ES.', null, true)
     setMeta('og:type', 'website', null, true)
     setMeta('og:url', 'https://camilacavaleri.com/servicos/avaliacao-psicologica', null, true)
 
@@ -88,7 +88,7 @@ export default function AvaliacaoPsicologica() {
             <nav className={styles.breadcrumb} aria-label="Navegação estrutural">
               <Link to="/servicos">Serviços</Link>
               <span aria-hidden="true">›</span>
-              <span>Avaliação Psicológica</span>
+              <span>Avaliação Neuropsicológica</span>
             </nav>
 
             <h1 className={styles.avalH1}>
@@ -125,7 +125,7 @@ export default function AvaliacaoPsicologica() {
           <h2 className={styles.sectionH2}>Para quem é</h2>
 
           <p className={styles.sectionIntro}>
-            Pessoas que chegam à avaliação psicológica geralmente trazem uma hipótese, uma suspeita ou um encaminhamento. Em todos os casos, o objetivo é o mesmo: investigar com seriedade e chegar a respostas fundamentadas.
+            Pessoas que chegam à avaliação neuropsicológica geralmente trazem uma hipótese, uma suspeita ou um encaminhamento. Em todos os casos, o objetivo é o mesmo: investigar com seriedade e chegar a respostas fundamentadas.
           </p>
 
           <ul className={styles.pills} aria-label="Principais queixas">
@@ -193,7 +193,7 @@ export default function AvaliacaoPsicologica() {
           </div>
 
           <p className={styles.sectionBodySpaced}>
-            A avaliação psicológica acontece ao longo de 8 sessões, organizadas
+            A avaliação neuropsicológica acontece ao longo de 8 sessões, organizadas
             para investigar com profundidade as perguntas clínicas de cada caso.
           </p>
         </div>

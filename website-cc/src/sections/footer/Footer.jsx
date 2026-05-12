@@ -13,7 +13,7 @@ export default function Footer() {
             Vamos dar o próximo passo?
           </h2>
           <p className={styles.ctaText}>
-            Seja para iniciar um acompanhamento clínico ou uma avaliação psicológica, estou à disposição.
+            Seja para iniciar um acompanhamento clínico ou uma avaliação neuropsicológica, estou à disposição.
           </p>
           <a
             href="https://wa.me/5527988302361?text=Ol%C3%A1%2C%20Camila!%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20e%20como%20funciona%20o%20primeiro%20contato."
@@ -41,7 +41,7 @@ export default function Footer() {
               </span>
             </div>
             <div>
-              <p className={styles.brandMeta}>Psicologia Clínica e Avaliação Psicológica • CRP 16/11890</p>
+              <p className={styles.brandMeta}>Psicologia Clínica e Avaliação Neuropsicológica • CRP 16/11890</p>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ export default function Footer() {
               <Link to="/sobre">FAQ</Link>
               <Link to="/servicos">Serviços</Link>
               <Link to="/servicos/psicologia-breve">Psicologia Breve</Link>
-              <Link to="/servicos/avaliacao-psicologica">Avaliação Psicológica</Link>
+              <Link to="/servicos/avaliacao-psicologica">Avaliação Neuropsicológica</Link>
               <Link to="/contato">Contato</Link>
             </div>
           </div>
